@@ -14,7 +14,7 @@ from urllib.parse import urljoin
 SITES_FILE = 'sites.txt'
 APP_TITLE = 'Frosted Glass News Feed'
 APP_LINK = 'http://localhost:5000' # Placeholder, will be the live Render URL
-RSS_PATH = '/rss'
+RSS_PATH = '/feed.xml' # Changed path for clarity
 API_PATH = '/api/news'
 CONTACT_EMAIL = 'contact@example.com' 
 
@@ -194,7 +194,8 @@ def homepage():
     # Log the RSS link to the console as requested
     print(f"\n[SERVER LOG] Generated RSS Feed Link: {APP_LINK + RSS_PATH}\n")
 
-    # The HTML template for the news dashboard
+    # The HTML template for the news dashboard. Note the use of f-string and
+    # escaped curly braces {{...}} for JavaScript template literals to fix the SyntaxError.
     html_content = f"""
     <!DOCTYPE html>
     <html lang="en">
@@ -241,7 +242,7 @@ def homepage():
                            oninput="filterArticles()">
                     
                     <a href="{RSS_PATH}" class="w-full md:w-1/3 text-center text-sm font-semibold rounded-full p-3 bg-white text-indigo-700 hover:bg-indigo-100 transition duration-300 shadow-md">
-                        View RSS Feed (XML)
+                        View RSS Feed ({RSS_PATH.lstrip('/')})
                     </a>
                 </div>
             </header>
@@ -312,7 +313,8 @@ def homepage():
 
                 articles.forEach(article => {{
                     const dateObj = new Date(article.pub_date);
-                    const formattedDate = dateObj.toLocaleDateString('en-US', {{ year: 'numeric', month: 'short', day: 'numeric' }});
+                    // Escaping is needed here for Python to treat these as literal braces
+                    const formattedDate = dateObj.toLocaleDateString('en-US', {{{{ year: 'numeric', month: 'short', day: 'numeric' }}}}); 
                     
                     const articleHTML = `
                         <a href="${{article.url}}" target="_blank" rel="noopener" 
@@ -333,7 +335,7 @@ def homepage():
                     `;
                     newsGrid.insertAdjacentHTML('beforeend', articleHTML);
                 }});
-            }
+            }}
 
             // Handles the search feature
             function filterArticles() {{
@@ -351,7 +353,7 @@ def homepage():
                 }} else {{
                     noResultsMessage.style.display = 'none';
                 }}
-            }
+            }}
 
             // Load articles when the page loads
             window.onload = fetchArticles;
