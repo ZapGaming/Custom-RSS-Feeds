@@ -21,6 +21,17 @@
       <category>Important</category>
     </item>
 
+    <item>
+      <title>Welcome to the Matrix.Corp News feed</title>
+      <link>https://proxy-server-rkoy.onrender.com</link>
+      <guid isPermaLink="true">https://proxy-server-rkoy.onrender.com</guid>
+      <pubDate>Sat, 18 Oct 2025 18:06:00 GMT</pubDate>
+      <description>
+        &lt;p&gt;All new news will come out here so that it is accesible anywhere&lt;/p&gt;
+      </description>
+      <category>Welcome</category>
+    </item>
+
   </channel>
 </rss>
 
