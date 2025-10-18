@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title><![CDATA[ Matrix.Corp News 2 ]]></title>
+    <title><![CDATA[ Matrix.Corp News ]]></title>
     <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
     <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml" />
     <description><![CDATA[ Official proclamations and edicts from the Matrix.Corp administration. ]]></description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Oct 2025 20:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Oct 2025 22:00:00 GMT</lastBuildDate>
     
     <item>
       <title><![CDATA[ A Royal Decree: The Official Herald of the Realm ]]></title>
       <link>https://matrixcorp.news/royal-decree-001</link>
       <guid isPermaLink="false">matrix-corp-news-001</guid>
-      <pubDate>Sat, 18 Oct 2025 20:00:00 GMT</pubDate>
-      <description><![CDATA[ By royal decree, this feed shall henceforth serve as the official herald for all proclamations within the realm of Matrix.Corp. Let all loyal subjects heed these words, for they are the singular voice of the administration. All vital announcements, edicts, and declarations shall be delivered through this channel. ]]></description>
+      <pubDate>Sat, 18 Oct 2025 22:00:00 GMT</pubDate>
+      <description><![CDATA[ By royal decree, this feed shall henceforth serve as the official and singular herald for all proclamations within the realm of Matrix.Corp. Let all loyal subjects heed these words, for this channel is the sanctioned voice of the administration. All vital announcements, strategic edicts, policy changes, and declarations of corporate intent shall be delivered through this secure feed. Ignorance of any proclamation published herein will not be accepted as an excuse. ]]></description>
     </item>
 
     <item>
@@ -21,7 +21,7 @@
       <link>https://matrixcorp.news/ranks-of-the-realm</link>
       <guid isPermaLink="false">matrix-corp-news-002</guid>
       <pubDate>Fri, 17 Oct 2025 19:00:00 GMT</pubDate>
-      <description><![CDATA[ To maintain order and recognize merit within the realm, all personnel are assigned a station. The hierarchy of ranks, ascending from the lowest subject to the highest authority, is as follows: F, D, C, B, A, S, SS, SR, SSS, and the supreme rank of Z. Know your place and strive for greatness. ]]></description>
+      <description><![CDATA[ To maintain order and recognize merit within the realm, all personnel are assigned a station. The hierarchy of ranks, ascending from the lowest subject to the highest authority, is as follows: F, D, C, B, A, S, SS, SR, SSS, and the supreme rank of Z. Know your place and strive for greatness. Advancement is earned, and each tier carries with it new responsibilities and privileges sanctioned by the administration. ]]></description>
     </item>
 
     <item>
@@ -29,7 +29,7 @@
       <link>https://matrixcorp.news/digital-id-announcement</link>
       <guid isPermaLink="false">matrix-corp-news-003</guid>
       <pubDate>Thu, 16 Oct 2025 18:00:00 GMT</pubDate>
-      <description><![CDATA[ Official Matrix.Corp Digital Identity Cards will be made available for download starting October 21st, 2025. These verifiable credentials are tied directly to your user profile and provide cryptographic proof of your clearance and rank within the corporate hierarchy. ]]></description>
+      <description><![CDATA[ Official Matrix.Corp Digital Identity Cards will be made available for download starting October 21st, 2025. This is a mandatory update for all personnel. These verifiable credentials are tied directly to your user profile and provide cryptographic proof of your clearance and rank within the corporate hierarchy. This digital key will be essential for accessing secure networks and verifying your station throughout the realm. Failure to comply will result in access restrictions. ]]></description>
     </item>
 
   </channel>
