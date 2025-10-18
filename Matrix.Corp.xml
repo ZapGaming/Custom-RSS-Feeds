@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Matrix.Corp News</title>
-    <link>https://proxy-server-rkoy.onrender.com</link>
+    <title><![CDATA[ Matrix.Corp News ]]></title>
+    <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
     <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml" />
-    <description>Matrix.Corp official news source updated by admins, providing in-depth group-wide announcements.</description>
+    <description><![CDATA[ Matrix.Corp official news source updated by admins, providing in-depth group-wide announcements. ]]></description>
     <language>en-us</language>
-    <pubDate>Sat, 18 Oct 2025 18:06:00 GMT</pubDate>
     <lastBuildDate>Sat, 18 Oct 2025 18:28:00 GMT</lastBuildDate>
-    <generator>Zandy Wandy</generator>
-
+    
     <item>
-      <title>Digital ID Cards Commencing Distribution on 21/10/2025</title>
-      <link>https://www.canva.com/design/DAG1GHo6RME/7e8uOAre0_jWsp6zJLuZNQ/edit?utm_content=DAG1GHo6RME&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton</link>
-      <guid isPermaLink="true">https://www.canva.com/design/DAG1GHo6RME/7e8uOAre0_jWsp6zJLuZNQ/edit?utm_content=DAG1GHo6RME&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton</guid>
+      <title><![CDATA[ Digital ID Cards Commencing Distribution on 21/10/2025 ]]></title>
+      <link>https://matrixcorp.news/digital-id-announcement</link>
+      <guid isPermaLink="false">matrix-corp-news-001</guid>
       <pubDate>Sat, 18 Oct 2025 18:06:00 GMT</pubDate>
-      <description>Official Matrix.Corp Digital Identity Cards will be made available for download starting October 21st, 2025. These verifiable credentials are tied directly to your user profile and provide cryptographic proof of your clearance and access level within the corporate network hierarchy.</description>
-      <enclosure url="https://ik.imagekit.io/zapgaming/Admin%20(1).png?updatedAt=1759830681133" length="0" type="image/png" />
-      <category>Important</category>
+      <description><![CDATA[ Official Matrix.Corp Digital Identity Cards will be made available for download starting October 21st, 2025. These verifiable credentials are tied directly to your user profile and provide cryptographic proof of clearance. ]]></description>
+      <media:content url="https://ik.imagekit.io/zapgaming/Admin%20(1).png?updatedAt=1759830681133" medium="image" type="image/png" />
     </item>
 
     <item>
-      <title>Welcome to the Authoritative Matrix.Corp News Feed - RSS Deployment</title>
-      <link>https://proxy-server-rkoy.onrender.com</link>
-      <guid isPermaLink="true">https://proxy-server-rkoy.onrender.com</guid>
-      <pubDate>Sat, 18 Oct 2025 18:06:00 GMT</pubDate>
-      <description>This feed serves as the single, authoritative source for all critical Matrix.Corp announcements, utilizing the RSS standard for maximum syndication and accessibility across diverse client applications.</description>
-      <category>Welcome</category>
+      <title><![CDATA[ Welcome to the Authoritative Matrix.Corp News Feed ]]></title>
+      <link>https://matrixcorp.news/welcome</link>
+      <guid isPermaLink="false">matrix-corp-news-002</guid>
+      <pubDate>Fri, 17 Oct 2025 18:00:00 GMT</pubDate>
+      <description><![CDATA[ This feed serves as the single, authoritative source for all critical Matrix.Corp announcements, utilizing the RSS standard for maximum syndication and accessibility across diverse client applications. ]]></description>
     </item>
 
   </channel>
