@@ -1,42 +1,38 @@
-<?xml version="1.-0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title><![CDATA[ Home & Task List ]]></title>
-    <description><![CDATA[ A personal list of tasks and reminders. ]]></description>
+    <title>Home &amp; Task List</title>
+    <description>A personal list of tasks and reminders.</description>
     <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
     <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
     <lastBuildDate>Sun, 19 Oct 2025 03:00:00 GMT</lastBuildDate>
     
     <item>
-      <title><![CDATA[ 1. Meeting with the High Council at 3 PM. ]]>
-      </title>
+      <title>1. Meeting with the High Council at 3 PM.</title>
       <link>https://matrixcorp.news/placeholder</link>
-      <description><![CDATA[...]]></description>
+      <description>...</description>
       <guid isPermaLink="false">task-item-001</guid>
     </item>
 
     <item>
-      <title><![CDATA[ 2. Review the Q4 Realm Stability Reports. ]]>
-      </title>
+      <title>2. Review the Q4 Realm Stability Reports.</title>
       <link>https://matrixcorp.news/placeholder</link>
-      <description><![CDATA[...]]></description>
+      <description>...</description>
       <guid isPermaLink="false">task-item-002</guid>
     </item>
     
     <item>
-      <title><![CDATA[ 3. Remember to decree the new security protocols by end of day. ]]>
-      </title>
+      <title>3. Decree the new security protocols by end of day.</title>
       <link>https://matrixcorp.news/placeholder</link>
-      <description><![CDATA[...]]></description>
+      <description>...</description>
       <guid isPermaLink="false">task-item-003</guid>
     </item>
 
     <item>
-      <title><![CDATA[ 4. Schedule the rank elevation ceremony. ]]>
-      </title>
+      <title>4. Schedule the rank elevation ceremony.</title>
       <link>https://matrixcorp.news/placeholder</link>
-      <description><![CDATA[...]]></description>
+      <description>...</description>
       <guid isPermaLink="false">task-item-004</guid>
     </item>
     
