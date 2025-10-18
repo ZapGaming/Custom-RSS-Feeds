@@ -141,7 +141,7 @@ def scrape_data_to_json():
                 # Catch specific parsing errors (e.g., KeyError, AttributeError)
                 print(f"Failed to PARSE {url}: {e}")
                 data.append({
-                    'title': f"Parsing Failed for: {url}",
+                    'title': f"[FAIL] Parsing Failed for: {url}", # Added [FAIL] prefix
                     'url': url,
                     'author': "Scraping Error",
                     'description': f"Site content could not be parsed correctly. Error: {str(e)}",
@@ -155,7 +155,7 @@ def scrape_data_to_json():
             # Catch HTTP errors (timeouts, 404s, 403s)
             print(f"Failed to FETCH {url}: {e}")
             data.append({
-                'title': f"Fetching Failed for: {url}",
+                'title': f"[FAIL] Fetching Failed for: {url}", # Added [FAIL] prefix
                 'url': url,
                 'author': "Network Error",
                 'description': f"Could not reach or retrieve site content. Error: {str(e)}",
@@ -191,31 +191,52 @@ def rss_feed():
     fg.lastBuildDate(datetime.now(timezone.utc))
 
     for item in data:
-        if 'error' in item: continue
-
         fe = fg.add_entry()
         fe.id(item['url'])
         fe.title(item['title'])
+        # Crucial: The link must always point to the original site.
         fe.link(href=item['url'])
         
+        is_failed = item.get('title', '').startswith('[FAIL]')
+
         # Convert ISO date string back to datetime object for feedgen
         try:
              fe.pubDate(dateparser.parse(item['pub_date']))
         except:
-             pass
+             # Default to current time if parsing fails
+             fe.pubDate(datetime.now(timezone.utc))
 
-        # Build rich content for the feed description/content field
-        rich_content = ""
-        if item['image_url']:
-            rich_content += f'<p><img src="{item["image_url"]}" alt="{item["title"]}" style="max-width: 100%; height: auto; border-radius: 8px;"></p>'
+        # --- Handle Content Generation ---
+        if is_failed:
+            # Custom content for failed entries as requested
+            error_description = item["description"]
+            
+            # The user wants this message to be explicitly clear in the RSS content
+            rich_content = f"""
+            <div style="background-color: #fdd; border: 1px solid #c00; padding: 10px; border-radius: 5px;">
+                <h3 style="color: #c00; margin-top: 0;">❌ SITE SCRAPING FAILED ❌</h3>
+                <p><strong>This link is currently not working in the RSS feed generator.</strong> The scraping tool could not successfully fetch or parse the content.</p>
+                <p><strong>Attempted URL:</strong> <a href="{item['url']}">{item['url']}</a></p>
+                <hr>
+                <p><strong>Failure Details:</strong> {error_description}</p>
+            </div>
+            """
+            fe.content(rich_content, type='html')
+            fe.author({'name': 'System Error'})
         
-        rich_content += f'<p><strong>Author:</strong> {item["author"]}</p>'
-        rich_content += f'<p><strong>Date:</strong> {dateparser.parse(item["pub_date"]).strftime("%Y-%m-%d %H:%M:%S %Z")}</p>'
-        rich_content += '<hr>'
-        rich_content += f'<p>{item["description"]}</p>'
-        
-        fe.content(rich_content, type='html')
-        fe.author({'name': item['author']})
+        else:
+            # Content for successful entries
+            rich_content = ""
+            if item['image_url']:
+                rich_content += f'<p><img src="{item["image_url"]}" alt="{item["title"]}" style="max-width: 100%; height: auto; border-radius: 8px;"></p>'
+            
+            rich_content += f'<p><strong>Author:</strong> {item["author"]}</p>'
+            rich_content += f'<p><strong>Date:</strong> {dateparser.parse(item["pub_date"]).strftime("%Y-%m-%d %H:%M:%S %Z")}</p>'
+            rich_content += '<hr>'
+            rich_content += f'<p>{item["description"]}</p>'
+            
+            fe.content(rich_content, type='html')
+            fe.author({'name': item['author']})
 
     return Response(fg.rss_str(pretty=True), mimetype='application/rss+xml')
 
@@ -328,14 +349,16 @@ def homepage():
             function displayArticles(articles) {{
                 newsGrid.innerHTML = '';
                 
-                // Filter out articles marked with error for display purposes, but show specific messages if all failed
-                const displayableArticles = articles.filter(a => !a.error && a.title.indexOf("Failed") === -1);
+                // Filter out articles that start with [FAIL] for the main display
+                const displayableArticles = articles.filter(a => !a.title.startsWith('[FAIL]'));
                 
                 if (displayableArticles.length === 0) {{
                     if (articles.length > 0) {{
-                         // Show a softer message if we had some success, but nothing matched the filter/all failed
+                         // Show a softer message if all failed or nothing matched the filter
                         newsGrid.innerHTML = '<div class="col-span-full text-center text-xl text-white py-10">' + 
-                                             'All sites either failed to fetch or parse correctly. Check sites.txt or logs.' +
+                                             (articles.length === articles.filter(a => a.title.startsWith('[FAIL]')).length ? 
+                                              'All configured sites failed to fetch or parse. Check your RSS feed for error details.' : 
+                                              'No articles matched your current search query.') +
                                              '</div>';
                     }} else {{
                         newsGrid.innerHTML = '<div class="col-span-full text-center text-xl text-white py-10">No sites configured. Please check sites.txt.</div>';
@@ -380,12 +403,12 @@ def homepage():
                     article.title.toLowerCase().includes(query) || 
                     article.description.toLowerCase().includes(query) ||
                     article.source_name.toLowerCase().includes(query)
-                ).filter(a => !a.error && a.title.indexOf("Failed") === -1); // Filter out failed entries
+                ).filter(a => !a.title.startsWith('[FAIL]')); // Filter out failed entries
 
                 
                 displayArticles(filtered);
                 
-                if (filtered.length === 0 && allArticles.filter(a => !a.error && a.title.indexOf("Failed") === -1).length > 0) {{
+                if (filtered.length === 0 && allArticles.filter(a => !a.title.startsWith('[FAIL]')).length > 0) {{
                     noResultsMessage.style.display = 'block';
                 }} else {{
                     noResultsMessage.style.display = 'none';
