@@ -5,16 +5,16 @@
    <![CDATA[ The Matrix.Corp Royal Herald ]]>
   </title>
   <description>
-   <![CDATA[ Official Edicts and Proclamations from the High Council of Matrix.Corp. Let none dispute the words herein. ]]>
+   <![CDATA[ Official Edicts and Proclamations from the High Council of Matrix.Corp. ]]>
   </description>
   <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
   <image>
-   <url>https://i.imgur.com/gK2t2P3.png</url>
+   <url>https://i.imgur.com/uRkMwm4.png</url>
    <title>The Matrix.Corp Royal Herald</title>
    <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
   </image>
   <generator>The Imperial Scribe</generator>
-  <lastBuildDate>Sat, 18 Oct 2025 23:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 19 Oct 2025 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml"/>
   <language>
    <![CDATA[ en-US ]]>
@@ -22,34 +22,34 @@
 
   <item>
    <title>
-    <![CDATA[ A Royal Decree: The Official Herald of the Realm ]]>
+    <![CDATA[ A ROYAL DECREE: By supreme order, this Royal Herald is now the sole voice for all official proclamations within the realm of Matrix.Corp. Let all loyal subjects give due reverence to these announcements, for they are the direct will of the administration. ]]>
    </title>
    <description>
-    <![CDATA[ <div><img src="https://i.imgur.com/U161sBq.jpeg" style="width: 100%;" /><div>By supreme order, this Royal Herald is now the sole voice for all official proclamations within the expansive realm of Matrix.Corp. Let all loyal subjects and vassals give due reverence to the announcements published here, for they are the direct will of the administration. These edicts shall shape the future of our great corporate empire.</div></div> ]]>
+    <![CDATA[ <div><img src="https://i.pinimg.com/originals/a0/62/8b/a0628b3a5a54955b2a0c44a7f0e74f4b.jpg" style="width: 100%;" /></div> ]]>
    </description>
-   <link>https://matrixcorp.news/royal-decree-herald</link>
-   <guid isPermaLink="false">matrix-corp-herald-001</guid>
+   <link>https://matrixcorp.news/royal-decree-herald-v2</link>
+   <guid isPermaLink="false">matrix-corp-herald-v2-001</guid>
    <dc:creator>
     <![CDATA[ The Imperial Scribe ]]>
    </dc:creator>
-   <pubDate>Sat, 18 Oct 2025 23:00:00 GMT</pubDate>
-   <media:content medium="image" url="https://i.imgur.com/U161sBq.jpeg"/>
+   <pubDate>Sun, 19 Oct 2025 00:00:00 GMT</pubDate>
+   <media:content medium="image" url="https://i.pinimg.com/originals/a0/62/8b/a0628b3a5a54955b2a0c44a7f0e74f4b.jpg"/>
   </item>
   
   <item>
    <title>
-    <![CDATA[ An Imperial Edict: The Stations of the Realm ]]>
+    <![CDATA[ AN IMPERIAL EDICT: To preserve order, the High Council decrees the official hierarchy of all personnel. The ranks are as follows, from lowest to highest authority: F, D, C, B, A, S, SS, SR, SSS, and the supreme rank of Z. Know your station and its duties. ]]>
    </title>
    <description>
-    <![CDATA[ <div><img src="https://i.imgur.com/WlG34Cf.jpeg" style="width: 100%;" /><div>To preserve the immaculate order of the realm, the High Council has sanctioned the official hierarchy of all personnel. Know your station and its duties. The ranks are decreed as follows, from the lowest commoner to the highest sovereign authority: F, D, C, B, A, S, SS, SR, SSS, and the supreme rank of Z. Perform your duties with honor, and you may find your station elevated in due time.</div></div> ]]>
+    <![CDATA[ <div><img src="https://cdna.artstation.com/p/assets/images/images/051/021/688/large/denis-zhbankov-asset.jpg?1656272522" style="width: 100%;" /></div> ]]>
    </description>
-   <link>https://matrixcorp.news/edict-of-ranks</link>
-   <guid isPermaLink="false">matrix-corp-herald-002</guid>
+   <link>https://matrixcorp.news/edict-of-ranks-v2</link>
+   <guid isPermaLink="false">matrix-corp-herald-v2-002</guid>
    <dc:creator>
     <![CDATA[ The Grand Chancellor ]]>
    </dc:creator>
-   <pubDate>Fri, 17 Oct 2025 22:30:00 GMT</pubDate>
-   <media:content medium="image" url="https://i.imgur.com/WlG34Cf.jpeg"/>
+   <pubDate>Sat, 18 Oct 2025 23:30:00 GMT</pubDate>
+   <media:content medium="image" url="https://cdna.artstation.com/p/assets/images/images/051/021/688/large/denis-zhbankov-asset.jpg?1656272522"/>
   </item>
 
  </channel>
