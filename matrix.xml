@@ -18,7 +18,7 @@
 <language>
 <![CDATA[ en-US ]]>
 </language>
-  <item>
+<item>
   <title>
   <![CDATA[ Digital ID Cards Commencing Distribution on 21/10/2025 ]]>
   </title>
@@ -32,8 +32,8 @@
   </dc:creator>
   <pubDate>Fri, 18 Oct 2025 19:03:13 GMT</pubDate>
   <media:content medium="image" url="https://ik.imagekit.io/zapgaming/Admin%20(1).png?updatedAt=1759830681133"/>
-  </item>
-  <item>
+</item>
+<item>
   <title>
   <![CDATA[ Welcome to the Authoritative Matrix.Corp News Feed - RSS Deployment ]]>
   </title>
@@ -47,6 +47,6 @@
   </dc:creator>
   <pubDate>Fri, 17 Oct 2025 19:03:13 GMT</pubDate>
   <media:content medium="image" url="https://cdn.wccftech.com/wp-content/uploads/2025/05/Untitled-design-25-1.png"/>
-  </item>
+</item>
  </channel>
 </rss>
