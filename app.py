@@ -1,9 +1,8 @@
 import os
 import requests
 import re
-import json
 from datetime import datetime, timezone
-from flask import Flask, Response, render_template_string, jsonify
+from flask import Flask, Response
 from bs4 import BeautifulSoup
 from feedgen.feed import FeedGenerator
 from dateutil import parser as dateparser
@@ -12,12 +11,11 @@ from urllib.parse import urljoin
 
 # --- Configuration ---
 SITES_FILE = 'sites.txt'
-APP_TITLE = 'Frosted Glass News Feed'
+APP_TITLE = 'Pure XML Site Aggregator Feed'
 # --- IMPORTANT --- Set the application's external URL for correct RSS links.
 # Set APP_LINK to the confirmed render domain.
 APP_LINK = 'https://custom-rss-feeds.onrender.com' 
 RSS_PATH = '/feed.xml' # Path for the RSS XML feed
-API_PATH = '/api/news'
 CONTACT_EMAIL = 'contact@example.com' 
 
 app = Flask(__name__)
@@ -56,9 +54,44 @@ def extract_date(soup):
                     continue
     return datetime.now(timezone.utc)
 
-# Core Function: Scrapes data and returns JSON
-def scrape_data_to_json():
-    """Scrapes data from all sites and returns a list of dictionaries (JSON data)."""
+# Utility: Improved summary extraction
+def get_article_summary(soup, default_description="No robust summary found."):
+    """Aggressively tries to extract a meaningful summary from the page content."""
+    
+    # 1. Try OG/Meta descriptions first (Standard best practice)
+    og_description = soup.find('meta', attrs={'property': 'og:description'})
+    description_meta = soup.find('meta', attrs={'name': 'description'})
+    
+    if og_description and 'content' in og_description.attrs:
+        return og_description['content'].strip()
+    if description_meta and 'content' in description_meta.attrs:
+        return description_meta['content'].strip()
+
+    # 2. Aggressive fallback to main content area (Improved scraping)
+    main_content_selectors = ['article', 'main', '.post-content', '.entry-content', '#content', '#main']
+    
+    for selector in main_content_selectors:
+        main_block = soup.select_one(selector)
+        if main_block:
+            paragraphs = main_block.find_all('p', limit=3)
+            if paragraphs:
+                summary = ' '.join(p.get_text().strip() for p in paragraphs if p.get_text().strip())
+                # Clean up multiple spaces/newlines and limit length
+                summary = re.sub(r'\s+', ' ', summary)
+                return summary[:500] + "..." if len(summary) > 500 else summary
+    
+    # 3. Last fallback to the first paragraph
+    first_p = soup.find('p')
+    if first_p:
+        text = first_p.get_text().strip()
+        text = re.sub(r'\s+', ' ', text)
+        return text[:200] + "..." if len(text) > 200 else text
+
+    return default_description
+
+# Core Function: Scrapes data and returns JSON (one entry per site)
+def get_site_metadata():
+    """Scrapes metadata from all sites, creating one single entry per URL."""
     data = []
     sites = get_site_list()
     
@@ -81,10 +114,12 @@ def scrape_data_to_json():
             
             # --- Robust Parsing Block ---
             try:
-                # 1. Title
+                # 1. Title (Cleaned for RSS compatibility)
                 page_title = soup.title.string.strip() if soup.title else f"Untitled Page: {url}"
+                # Remove special characters that can break XML feeds
+                page_title = re.sub(r'[^\w\s\-\|&]', '', page_title) 
 
-                # 2. Author
+                # 2. Author/Source Name
                 author = "Unknown Source"
                 author_meta = soup.find('meta', attrs={'name': 'author'})
                 og_site_name = soup.find('meta', attrs={'property': 'og:site_name'})
@@ -94,25 +129,9 @@ def scrape_data_to_json():
                 elif og_site_name and 'content' in og_site_name.attrs:
                     author = og_site_name['content'].strip()
                 
-                # 3. Description/Summary
-                description_meta = soup.find('meta', attrs={'name': 'description'})
-                og_description = soup.find('meta', attrs={'property': 'og:description'})
-                description = ""
-
-                if og_description and 'content' in og_description.attrs:
-                    description = og_description['content'].strip()
-                elif description_meta and 'content' in description_meta.attrs:
-                    description = description_meta['content'].strip()
+                # 3. Description/Summary (Using improved function)
+                description = get_article_summary(soup)
                 
-                if not description:
-                    # Fallback to the first paragraph, truncated
-                    first_p = soup.find('p')
-                    if first_p:
-                        text = first_p.get_text().strip()
-                        description = text[:200] + "..." if len(text) > 200 else text
-                    elif not description:
-                        description = "No robust summary found."
-
                 # 4. Image URL
                 image_url = None
                 og_image = soup.find('meta', attrs={'property': 'og:image'})
@@ -132,16 +151,15 @@ def scrape_data_to_json():
                     'author': author,
                     'description': description,
                     'image_url': image_url,
-                    # Convert datetime to ISO string for safe JSON serialization
                     'pub_date': pub_date.isoformat(), 
-                    'source_name': author, # Use author as source for display
+                    'source_name': author, 
                 })
 
             except Exception as e:
                 # Catch specific parsing errors (e.g., KeyError, AttributeError)
                 print(f"Failed to PARSE {url}: {e}")
                 data.append({
-                    'title': f"[FAIL] Parsing Failed for: {url}", # Added [FAIL] prefix
+                    'title': f"[FAIL] Parsing Failed for: {url}",
                     'url': url,
                     'author': "Scraping Error",
                     'description': f"Site content could not be parsed correctly. Error: {str(e)}",
@@ -155,7 +173,7 @@ def scrape_data_to_json():
             # Catch HTTP errors (timeouts, 404s, 403s)
             print(f"Failed to FETCH {url}: {e}")
             data.append({
-                'title': f"[FAIL] Fetching Failed for: {url}", # Added [FAIL] prefix
+                'title': f"[FAIL] Fetching Failed for: {url}",
                 'url': url,
                 'author': "Network Error",
                 'description': f"Could not reach or retrieve site content. Error: {str(e)}",
@@ -169,31 +187,32 @@ def scrape_data_to_json():
     data.sort(key=lambda x: x.get('pub_date', ''), reverse=True)
     return data
 
-@app.route(API_PATH)
-def news_api():
-    """Endpoint that returns scraped data as JSON."""
-    return jsonify(scrape_data_to_json())
-
 @app.route(RSS_PATH)
+@app.route('/') # Serve the XML feed on the root path
 def rss_feed():
     """The endpoint that serves the generated RSS XML."""
-    data = scrape_data_to_json()
+    
+    # 1. Fetch the single-entry metadata for each site
+    data = get_site_metadata()
     
     fg = FeedGenerator()
     fg.id(APP_LINK + RSS_PATH)
     fg.title(APP_TITLE)
     fg.author({'name': 'RSS Generator', 'email': CONTACT_EMAIL})
     fg.link(href=APP_LINK, rel='alternate')
-    # Use the correct, updated APP_LINK for the self-referencing link
     fg.link(href=APP_LINK + RSS_PATH, rel='self') 
     fg.language('en')
-    fg.description('An aggregated feed of custom URLs scraped for rich content.')
+    fg.description('An aggregated feed of custom URLs scraped for rich content, one entry per site.')
     fg.lastBuildDate(datetime.now(timezone.utc))
 
     for item in data:
         fe = fg.add_entry()
         fe.id(item['url'])
-        fe.title(item['title'])
+        
+        # Ensure title is clean for RSS item compatibility
+        clean_title = item['title'].replace('[FAIL]', 'Scraping Failed')
+        fe.title(clean_title)
+
         # Crucial: The link must always point to the original site.
         fe.link(href=item['url'])
         
@@ -206,227 +225,47 @@ def rss_feed():
              # Default to current time if parsing fails
              fe.pubDate(datetime.now(timezone.utc))
 
-        # --- Handle Content Generation ---
+        # --- Handle Content Generation: Using fe.description() for compatibility ---
         if is_failed:
-            # Custom content for failed entries as requested
             error_description = item["description"]
             
-            # The user wants this message to be explicitly clear in the RSS content
+            # Use simple HTML wrapped in a CDATA section by feedgen
             rich_content = f"""
-            <div style="background-color: #fdd; border: 1px solid #c00; padding: 10px; border-radius: 5px;">
-                <h3 style="color: #c00; margin-top: 0;">❌ SITE SCRAPING FAILED ❌</h3>
-                <p><strong>This link is currently not working in the RSS feed generator.</strong> The scraping tool could not successfully fetch or parse the content.</p>
+            <div style="color: #CC0000; border: 1px solid #CC0000; padding: 10px; background-color: #FFEEFF; border-radius: 4px;">
+                <h3 style="margin-top: 0; font-weight: bold;">❌ SCRAPING FAILED - INCOMPATIBLE SITE ❌</h3>
+                <p><strong>Status:</strong> This link is not working with the current RSS scraping engine.</p>
                 <p><strong>Attempted URL:</strong> <a href="{item['url']}">{item['url']}</a></p>
-                <hr>
-                <p><strong>Failure Details:</strong> {error_description}</p>
+                <hr style="border-top: 1px solid #CC0000;">
+                <p><strong>Error Details:</strong> {error_description}</p>
             </div>
             """
-            fe.content(rich_content, type='html')
+            fe.description(rich_content)
             fe.author({'name': 'System Error'})
         
         else:
             # Content for successful entries
             rich_content = ""
             if item['image_url']:
+                # Adding image as an enclosure is best practice for mobile news readers
+                fe.enclosure(url=item['image_url'], length='0', type='image/jpeg') 
+
                 rich_content += f'<p><img src="{item["image_url"]}" alt="{item["title"]}" style="max-width: 100%; height: auto; border-radius: 8px;"></p>'
             
-            rich_content += f'<p><strong>Author:</strong> {item["author"]}</p>'
+            rich_content += f'<p><strong>Source:</strong> {item["author"]}</p>'
             rich_content += f'<p><strong>Date:</strong> {dateparser.parse(item["pub_date"]).strftime("%Y-%m-%d %H:%M:%S %Z")}</p>'
             rich_content += '<hr>'
             rich_content += f'<p>{item["description"]}</p>'
             
-            fe.content(rich_content, type='html')
+            fe.description(rich_content)
             fe.author({'name': item['author']})
 
+    # Generate RSS string
     return Response(fg.rss_str(pretty=True), mimetype='application/rss+xml')
 
-
-@app.route('/')
-def homepage():
-    """The main page, serving the Glassmorphism News Dashboard."""
-    
-    # Log the RSS link to the console
-    print(f"\n[SERVER LOG] Generated RSS Feed Link: {APP_LINK + RSS_PATH}\n")
-
-    # The HTML template for the news dashboard. Curly braces are escaped as {{...}} for JavaScript.
-    html_content = f"""
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{APP_TITLE}</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-            body {{
-                font-family: 'Inter', sans-serif;
-                /* Background for the blur effect */
-                background: linear-gradient(135deg, #1f005c 0%, #a63f70 50%, #f68900 100%);
-                min-height: 100vh;
-                padding: 1rem;
-            }}
-            .glass-container {{
-                background: rgba(255, 255, 255, 0.15);
-                backdrop-filter: blur(10px); /* The Frosted Glass effect */
-                -webkit-backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 255, 255, 0.2);
-                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-                border-radius: 1rem;
-            }}
-            .glass-card {{
-                background: rgba(255, 255, 255, 0.05);
-                backdrop-filter: blur(4px);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-            }}
-        </style>
-    </head>
-    <body class="p-4">
-        <div class="glass-container mx-auto p-6 md:p-10 max-w-6xl">
-            <!-- Header and Search Bar -->
-            <header class="text-white mb-8">
-                <h1 class="text-4xl font-extrabold mb-2 text-shadow-lg">
-                    {APP_TITLE}
-                </h1>
-                <p class="text-indigo-200">Aggregated content from your custom sites, sorted by date.</p>
-                <div class="mt-6 flex flex-col md:flex-row gap-4 items-center">
-                    <input type="text" id="searchInput" placeholder="Search titles and summaries..."
-                           class="w-full md:w-2/3 p-3 rounded-full bg-white bg-opacity-20 border border-white border-opacity-30 placeholder-white text-white focus:outline-none focus:ring-2 focus:ring-indigo-300 transition duration-300"
-                           oninput="filterArticles()">
-                    
-                    <a href="{RSS_PATH}" class="w-full md:w-1/3 text-center text-sm font-semibold rounded-full p-3 bg-white text-indigo-700 hover:bg-indigo-100 transition duration-300 shadow-md">
-                        View RSS Feed ({RSS_PATH.lstrip('/')})
-                    </a>
-                </div>
-            </header>
-
-            <!-- Loading Indicator -->
-            <div id="loading" class="text-white text-center py-10">
-                <svg class="animate-spin h-8 w-8 text-white mx-auto mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                <p>Scraping data and building your feed. This may take a moment...</p>
-            </div>
-
-            <!-- News Grid -->
-            <main id="newsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" style="display: none;"></main>
-
-            <!-- No Results Message -->
-            <div id="noResults" class="text-white text-center py-10" style="display: none;">
-                <p class="text-xl font-semibold">No articles matched your search query.</p>
-            </div>
-        </div>
-
-        <script>
-            const newsGrid = document.getElementById('newsGrid');
-            const loadingIndicator = document.getElementById('loading');
-            const searchInput = document.getElementById('searchInput');
-            const noResultsMessage = document.getElementById('noResults');
-            let allArticles = [];
-
-            // Fetches data from the API endpoint
-            async function fetchArticles() {{
-                try {{
-                    const response = await fetch('{API_PATH}');
-                    if (!response.ok) {{
-                        throw new Error(`HTTP error! status: ${{response.status}}`);
-                    }}
-                    allArticles = await response.json();
-                    
-                    loadingIndicator.style.display = 'none';
-                    newsGrid.style.display = 'grid';
-                    
-                    displayArticles(allArticles);
-
-                }} catch (error) {{
-                    console.error("Failed to fetch news data:", error);
-                    loadingIndicator.innerHTML = '<p class="text-red-300">Error loading data. Check server logs or sites.txt configuration.</p>';
-                }}
-            }}
-            
-            // Renders articles to the grid
-            function displayArticles(articles) {{
-                newsGrid.innerHTML = '';
-                
-                // Filter out articles that start with [FAIL] for the main display
-                const displayableArticles = articles.filter(a => !a.title.startsWith('[FAIL]'));
-                
-                if (displayableArticles.length === 0) {{
-                    if (articles.length > 0) {{
-                         // Show a softer message if all failed or nothing matched the filter
-                        newsGrid.innerHTML = '<div class="col-span-full text-center text-xl text-white py-10">' + 
-                                             (articles.length === articles.filter(a => a.title.startsWith('[FAIL]')).length ? 
-                                              'All configured sites failed to fetch or parse. Check your RSS feed for error details.' : 
-                                              'No articles matched your current search query.') +
-                                             '</div>';
-                    }} else {{
-                        newsGrid.innerHTML = '<div class="col-span-full text-center text-xl text-white py-10">No sites configured. Please check sites.txt.</div>';
-                    }}
-                    noResultsMessage.style.display = 'none';
-                    return;
-                }}
-
-
-                noResultsMessage.style.display = 'none';
-
-                displayableArticles.forEach(article => {{
-                    const dateObj = new Date(article.pub_date);
-                    // Escaping is needed here for Python to treat these as literal braces
-                    const formattedDate = dateObj.toLocaleDateString('en-US', {{{{ year: 'numeric', month: 'short', day: 'numeric' }}}}); 
-                    
-                    const articleHTML = `
-                        <a href="${{article.url}}" target="_blank" rel="noopener" 
-                           class="glass-card p-4 rounded-xl shadow-lg transition transform hover:scale-[1.03] duration-300 text-white block">
-                            ${{article.image_url ? 
-                                `<img src="${{article.image_url}}" alt="${{article.title}}" 
-                                      class="w-full h-40 object-cover rounded-lg mb-4 shadow-md"
-                                      onerror="this.onerror=null; this.src='https://placehold.co/400x200/505050/FFFFFF?text=No+Image';">` : 
-                                `<div class="w-full h-40 bg-gray-700 bg-opacity-30 rounded-lg mb-4 flex items-center justify-center text-sm">No Image Available</div>`
-                            }}
-                            
-                            <h2 class="text-xl font-bold mb-2 leading-snug">${{article.title}}</h2>
-                            <p class="text-xs font-semibold text-indigo-200 uppercase mb-2">
-                                ${{article.source_name}} • ${{formattedDate}}
-                            </p>
-                            <p class="text-sm text-gray-200">${{article.description}}</p>
-                        </a>
-                    `;
-                    newsGrid.insertAdjacentHTML('beforeend', articleHTML);
-                }});
-            }}
-
-            // Handles the search feature
-            function filterArticles() {{
-                const query = searchInput.value.toLowerCase();
-                const filtered = allArticles.filter(article => 
-                    article.title.toLowerCase().includes(query) || 
-                    article.description.toLowerCase().includes(query) ||
-                    article.source_name.toLowerCase().includes(query)
-                ).filter(a => !a.title.startsWith('[FAIL]')); // Filter out failed entries
-
-                
-                displayArticles(filtered);
-                
-                if (filtered.length === 0 && allArticles.filter(a => !a.title.startsWith('[FAIL]')).length > 0) {{
-                    noResultsMessage.style.display = 'block';
-                }} else {{
-                    noResultsMessage.style.display = 'none';
-                }}
-            }}
-
-            // Load articles when the page loads
-            window.onload = fetchArticles;
-
-        </script>
-    </body>
-    </html>
-    """
-    return render_template_string(html_content)
 
 if __name__ == '__main__':
     # Set the App link for local testing when not deployed on Render
     APP_LINK = 'http://127.0.0.1:5000'
     print(f"\n[SERVER START] Starting local server at {APP_LINK}")
-    print(f"[SERVER START] RSS Feed will be available at: {APP_LINK + RSS_PATH}")
+    print(f"[SERVER START] RSS Feed will be available at: {APP_LINK} or {APP_LINK + RSS_PATH}")
     app.run(debug=True)
