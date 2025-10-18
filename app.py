@@ -13,8 +13,10 @@ from urllib.parse import urljoin
 # --- Configuration ---
 SITES_FILE = 'sites.txt'
 APP_TITLE = 'Frosted Glass News Feed'
-APP_LINK = 'http://localhost:5000' # Placeholder, will be the live Render URL
-RSS_PATH = '/feed.xml' # Changed path for clarity
+# --- IMPORTANT --- Set the application's external URL for correct RSS links.
+# Set APP_LINK to the confirmed render domain.
+APP_LINK = 'https://custom-rss-feeds.onrender.com' 
+RSS_PATH = '/feed.xml' # Path for the RSS XML feed
 API_PATH = '/api/news'
 CONTACT_EMAIL = 'contact@example.com' 
 
@@ -25,6 +27,7 @@ def get_site_list():
     """Reads the list of sites from sites.txt."""
     try:
         with open(SITES_FILE, 'r') as f:
+            # Filter out comments and empty lines
             urls = [line.strip() for line in f if line.strip() and not line.strip().startswith('#')]
         return urls
     except FileNotFoundError:
@@ -62,72 +65,101 @@ def scrape_data_to_json():
     if not sites:
         return [{"error": "No sites configured in sites.txt"}]
 
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+    # Enhanced headers to better mimic a browser and pass basic bot checks
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Connection': 'keep-alive'
+    }
 
     for url in sites:
         try:
-            response = requests.get(url, timeout=10, headers=headers)
+            # Attempt to fetch the content. Added verify=False to bypass SSLCertVerificationError.
+            response = requests.get(url, timeout=10, headers=headers, verify=False)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
-
-            # 1. Title
-            page_title = soup.title.string.strip() if soup.title else f"Untitled Page: {url}"
-
-            # 2. Author
-            author = "Unknown Source"
-            author_meta = soup.find('meta', attrs={'name': 'author'})
-            og_site_name = soup.find('meta', attrs={'property': 'og:site_name'})
             
-            if author_meta and 'content' in author_meta.attrs:
-                author = author_meta['content'].strip()
-            elif og_site_name and 'content' in og_site_name.attrs:
-                author = og_site_name['content'].strip()
-            
-            # 3. Description/Summary
-            description_meta = soup.find('meta', attrs={'name': 'description'})
-            og_description = soup.find('meta', attrs={'property': 'og:description'})
-            description = ""
+            # --- Robust Parsing Block ---
+            try:
+                # 1. Title
+                page_title = soup.title.string.strip() if soup.title else f"Untitled Page: {url}"
 
-            if og_description and 'content' in og_description.attrs:
-                description = og_description['content'].strip()
-            elif description_meta and 'content' in description_meta.attrs:
-                description = description_meta['content'].strip()
-            
-            if not description:
-                first_p = soup.find('p')
-                if first_p:
-                    description = first_p.get_text().strip()[:200] + "..." if len(first_p.get_text().strip()) > 200 else first_p.get_text().strip()
-                elif not description:
-                    description = "No robust summary found."
+                # 2. Author
+                author = "Unknown Source"
+                author_meta = soup.find('meta', attrs={'name': 'author'})
+                og_site_name = soup.find('meta', attrs={'property': 'og:site_name'})
+                
+                if author_meta and 'content' in author_meta.attrs:
+                    author = author_meta['content'].strip()
+                elif og_site_name and 'content' in og_site_name.attrs:
+                    author = og_site_name['content'].strip()
+                
+                # 3. Description/Summary
+                description_meta = soup.find('meta', attrs={'name': 'description'})
+                og_description = soup.find('meta', attrs={'property': 'og:description'})
+                description = ""
 
-            # 4. Image URL
-            image_url = None
-            og_image = soup.find('meta', attrs={'property': 'og:image'})
-            if og_image and 'content' in og_image.attrs:
-                image_url = og_image['content'].strip()
+                if og_description and 'content' in og_description.attrs:
+                    description = og_description['content'].strip()
+                elif description_meta and 'content' in description_meta.attrs:
+                    description = description_meta['content'].strip()
+                
+                if not description:
+                    # Fallback to the first paragraph, truncated
+                    first_p = soup.find('p')
+                    if first_p:
+                        text = first_p.get_text().strip()
+                        description = text[:200] + "..." if len(text) > 200 else text
+                    elif not description:
+                        description = "No robust summary found."
 
-            # 5. Date
-            pub_date = extract_date(soup)
+                # 4. Image URL
+                image_url = None
+                og_image = soup.find('meta', attrs={'property': 'og:image'})
+                if og_image and 'content' in og_image.attrs:
+                    image_url = og_image['content'].strip()
+                # Relative URL handling: make sure the image URL is absolute
+                if image_url and image_url.startswith('/'):
+                    image_url = urljoin(url, image_url)
 
-            data.append({
-                'title': page_title,
-                'url': url,
-                'author': author,
-                'description': description,
-                'image_url': image_url,
-                # Convert datetime to ISO string for safe JSON serialization
-                'pub_date': pub_date.isoformat(), 
-                'source_name': author, # Use author as source for display
-            })
+
+                # 5. Date
+                pub_date = extract_date(soup)
+
+                data.append({
+                    'title': page_title,
+                    'url': url,
+                    'author': author,
+                    'description': description,
+                    'image_url': image_url,
+                    # Convert datetime to ISO string for safe JSON serialization
+                    'pub_date': pub_date.isoformat(), 
+                    'source_name': author, # Use author as source for display
+                })
+
+            except Exception as e:
+                # Catch specific parsing errors (e.g., KeyError, AttributeError)
+                print(f"Failed to PARSE {url}: {e}")
+                data.append({
+                    'title': f"Parsing Failed for: {url}",
+                    'url': url,
+                    'author': "Scraping Error",
+                    'description': f"Site content could not be parsed correctly. Error: {str(e)}",
+                    'image_url': 'https://placehold.co/150x100/505050/FFFFFF?text=Parsing+Error',
+                    'pub_date': datetime.now(timezone.utc).isoformat(),
+                    'source_name': "Error"
+                })
+                continue
 
         except requests.exceptions.RequestException as e:
-            print(f"Failed to scrape {url}: {e}")
+            # Catch HTTP errors (timeouts, 404s, 403s)
+            print(f"Failed to FETCH {url}: {e}")
             data.append({
-                'title': f"Scraping Failed for: {url}",
+                'title': f"Fetching Failed for: {url}",
                 'url': url,
-                'author': "System Error",
-                'description': f"Could not reach or parse site. Error: {str(e)}",
-                'image_url': 'https://placehold.co/150x100/A0A0A0/FFFFFF?text=Error',
+                'author': "Network Error",
+                'description': f"Could not reach or retrieve site content. Error: {str(e)}",
+                'image_url': 'https://placehold.co/150x100/A0A0A0/FFFFFF?text=Fetching+Error',
                 'pub_date': datetime.now(timezone.utc).isoformat(),
                 'source_name': "Error"
             })
@@ -152,7 +184,8 @@ def rss_feed():
     fg.title(APP_TITLE)
     fg.author({'name': 'RSS Generator', 'email': CONTACT_EMAIL})
     fg.link(href=APP_LINK, rel='alternate')
-    fg.link(href=APP_LINK + RSS_PATH, rel='self')
+    # Use the correct, updated APP_LINK for the self-referencing link
+    fg.link(href=APP_LINK + RSS_PATH, rel='self') 
     fg.language('en')
     fg.description('An aggregated feed of custom URLs scraped for rich content.')
     fg.lastBuildDate(datetime.now(timezone.utc))
@@ -191,11 +224,10 @@ def rss_feed():
 def homepage():
     """The main page, serving the Glassmorphism News Dashboard."""
     
-    # Log the RSS link to the console as requested
+    # Log the RSS link to the console
     print(f"\n[SERVER LOG] Generated RSS Feed Link: {APP_LINK + RSS_PATH}\n")
 
-    # The HTML template for the news dashboard. Note the use of f-string and
-    # escaped curly braces {{...}} for JavaScript template literals to fix the SyntaxError.
+    # The HTML template for the news dashboard. Curly braces are escaped as {{...}} for JavaScript.
     html_content = f"""
     <!DOCTYPE html>
     <html lang="en">
@@ -296,22 +328,26 @@ def homepage():
             function displayArticles(articles) {{
                 newsGrid.innerHTML = '';
                 
-                if (articles.length === 0 || (articles.length === 1 && articles[0].error)) {{
-                    newsGrid.innerHTML = '<div class="col-span-full text-center text-xl text-white py-10">' + 
-                                         (articles[0] && articles[0].error ? articles[0].error : 'No articles found. Please check sites.txt.') +
-                                         '</div>';
+                // Filter out articles marked with error for display purposes, but show specific messages if all failed
+                const displayableArticles = articles.filter(a => !a.error && a.title.indexOf("Failed") === -1);
+                
+                if (displayableArticles.length === 0) {{
+                    if (articles.length > 0) {{
+                         // Show a softer message if we had some success, but nothing matched the filter/all failed
+                        newsGrid.innerHTML = '<div class="col-span-full text-center text-xl text-white py-10">' + 
+                                             'All sites either failed to fetch or parse correctly. Check sites.txt or logs.' +
+                                             '</div>';
+                    }} else {{
+                        newsGrid.innerHTML = '<div class="col-span-full text-center text-xl text-white py-10">No sites configured. Please check sites.txt.</div>';
+                    }}
                     noResultsMessage.style.display = 'none';
                     return;
                 }}
-                
-                if (articles.length === 0) {{
-                    noResultsMessage.style.display = 'block';
-                    return;
-                }}
+
 
                 noResultsMessage.style.display = 'none';
 
-                articles.forEach(article => {{
+                displayableArticles.forEach(article => {{
                     const dateObj = new Date(article.pub_date);
                     // Escaping is needed here for Python to treat these as literal braces
                     const formattedDate = dateObj.toLocaleDateString('en-US', {{{{ year: 'numeric', month: 'short', day: 'numeric' }}}}); 
@@ -344,11 +380,12 @@ def homepage():
                     article.title.toLowerCase().includes(query) || 
                     article.description.toLowerCase().includes(query) ||
                     article.source_name.toLowerCase().includes(query)
-                );
+                ).filter(a => !a.error && a.title.indexOf("Failed") === -1); // Filter out failed entries
+
                 
                 displayArticles(filtered);
                 
-                if (filtered.length === 0 && allArticles.length > 0) {{
+                if (filtered.length === 0 && allArticles.filter(a => !a.error && a.title.indexOf("Failed") === -1).length > 0) {{
                     noResultsMessage.style.display = 'block';
                 }} else {{
                     noResultsMessage.style.display = 'none';
@@ -365,7 +402,7 @@ def homepage():
     return render_template_string(html_content)
 
 if __name__ == '__main__':
-    # Set the App link for local testing
+    # Set the App link for local testing when not deployed on Render
     APP_LINK = 'http://127.0.0.1:5000'
     print(f"\n[SERVER START] Starting local server at {APP_LINK}")
     print(f"[SERVER START] RSS Feed will be available at: {APP_LINK + RSS_PATH}")
