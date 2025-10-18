@@ -26,42 +26,27 @@
 <![CDATA[ <div><img src="https://ik.imagekit.io/zapgaming/Admin%20(1).png?updatedAt=1759830681133" style="width: 100%;" /><div>Matrix.Corp Digital Identity Cards</strong> will be made available for download starting October 21st, 2025. These verifiable credentials are tied directly to your user profile</div></div> ]]>
 </description>
 <link>https://www.canva.com/design/DAG1GHo6RME/7e8uOAre0_jWsp6zJLuZNQ/edit?utm_content=DAG1GHo6RME&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton</link>
-<guid isPermaLink="true">https://www.canva.com/design/DAG1GHo6RME/7e8uOAre0_jWsp6zJLuZNQ/edit?utm_content=DAG1GHo6RME&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton</guid>
+<guid isPermaLink="false">https://www.canva.com/design/DAG1GHo6RME/7e8uOAre0_jWsp6zJLuZNQ/edit?utm_content=DAG1GHo6RME&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton</guid>
 <dc:creator>
 <![CDATA[ Zandy Wandy ]]>
 </dc:creator>
 <pubDate>Fri, 18 Oct 2025 19:03:13 GMT</pubDate>
 <media:content medium="image" url="https://ik.imagekit.io/zapgaming/Admin%20(1).png?updatedAt=1759830681133"/>
 </item>
-    <item>
-      <title>Digital ID Cards Commencing Distribution on 21/10/2025</title>
-      <link>https://www.canva.com/design/DAG1GHo6RME/7e8uOAre0_jWsp6zJLuZNQ/edit?utm_content=DAG1GHo6RME&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton</link>
-      <guid isPermaLink="true">https://www.canva.com/design/DAG1GHo6RME/7e8uOAre0_jWsp6zJLuZNQ/edit?utm_content=DAG1GHo6RME&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton</guid>
-      <pubDate>Sat, 18 Oct 2025 18:06:00 GMT</pubDate>
-      <description>
-        <![CDATA[
-          <!-- Inserted Image Tag for the Item -->
-          <img src="https://ik.imagekit.io/zapgaming/Admin%20(1).png?updatedAt=1759830681133" alt="Preview of the new digital ID card" style="display: block; max-width: 100%; height: auto; margin: 0 0 15px 0; border-radius: 8px;" />
-          <p>Official <strong>Matrix.Corp Digital Identity Cards</strong> will be made available for download starting October 21st, 2025. These verifiable credentials are tied directly to your user profile and provide cryptographic proof of your clearance and access level within the corporate network hierarchy.</p>
-          <p>The unique identifier embedded within the QR code is generated using a secure, one-way hash derived from your cumulative performance metrics and <strong>quantifiable test results</strong>, ensuring authenticity and preventing tampering. This deployment is essential for establishing a robust system of decentralized access control and improving regulatory compliance, enabling faster, auditable verification for all personnel accessing restricted resources and physical areas across the facilities.</p>
-        ]]>
-      </description>
-      <category>Important</category>
-    </item>
-
-    <item>
-      <title>Welcome to the Authoritative Matrix.Corp News Feed - RSS Deployment</title>
-      <link>https://proxy-server-rkoy.onrender.com</link>
-      <guid isPermaLink="true">https://proxy-server-rkoy.onrender.com</guid>
-      <pubDate>Sat, 18 Oct 2025 18:06:00 GMT</pubDate>
-      <description>
-        <![CDATA[
-          <p>This feed serves as the single, authoritative source for all critical <strong>Matrix.Corp announcements</strong>, utilizing the RSS standard for maximum syndication and accessibility across diverse client applications.</p>
-          <p>By migrating our communications to this asynchronous, real-time protocol, we ensure that technical specifications, crucial policy updates, and operational status reports are instantly delivered to all authorized endpoints—from desktop readers to mobile aggregators. The use of this persistent feed eliminates reliance on traditional email distribution systems, drastically reducing latency and the risk of message filtering or delay. Please integrate this endpoint URL into your preferred feed reader to guarantee immediate ingestion of future high-priority corporate and system notifications.</p>
-        ]]>
-      </description>
-      <category>Welcome</category>
-    </item>
-
-  </channel>
+<item>
+<title>
+<![CDATA[ Welcome to the Authoritative Matrix.Corp News Feed - RSS Deployment ]]>
+</title>
+<description>
+<![CDATA[ <div><img src="" style="width: 100%;" /><div>All official announcement will come out here</div></div> ]]>
+</description>
+<link>https://proxy-server-rkoy.onrender.com</link>
+<guid isPermaLink="false">https://proxy-server-rkoy.onrender.com</guid>
+<dc:creator>
+<![CDATA[ Zandy Wandy ]]>
+</dc:creator>
+<pubDate>Fri, 17 Oct 2025 19:03:13 GMT</pubDate>
+<media:content medium="image" url="https://cdn.wccftech.com/wp-content/uploads/2025/05/Untitled-design-25-1.png"/>
+</item>
+</channel>
 </rss>
