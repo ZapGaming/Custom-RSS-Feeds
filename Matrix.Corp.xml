@@ -1,56 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
- <channel>
-  <title>
-   <![CDATA[ The Matrix.Corp Royal Herald ]]>
-  </title>
-  <description>
-   <![CDATA[ Official Edicts and Proclamations from the High Council of Matrix.Corp. ]]>
-  </description>
-  <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
-  <image>
-   <url>https://i.imgur.com/uRkMwm4.png</url>
-   <title>The Matrix.Corp Royal Herald</title>
-   <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
-  </image>
-  <generator>The Imperial Scribe</generator>
-  <lastBuildDate>Sun, 19 Oct 2025 01:00:00 GMT</lastBuildDate>
-  <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml"/>
-  <language>
-   <![CDATA[ en-US ]]>
-  </language>
-
-  <item>
-   <title>
-    <![CDATA[ A ROYAL DECREE: This Herald is now the sole voice for all official proclamations within the realm of Matrix.Corp. ]]>
-   </title>
-   <description>
-    <![CDATA[ <div><img src="https://i.pinimg.com/originals/a0/62/8b/a0628b3a5a54955b2a0c44a7f0e74f4b.jpg" style="width: 100%;" /><div>By supreme order, let all loyal subjects give due reverence to the announcements published here, for they are the direct will of the administration.</div></div> ]]>
-   </description>
-   <link>https://matrixcorp.news/royal-decree-herald-v3</link>
-   <guid isPermaLink="false">matrix-corp-herald-v3-001</guid>
-   <dc:creator>
-    <![CDATA[ The Imperial Scribe ]]>
-   </dc:creator>
-   <pubDate>Sun, 19 Oct 2025 01:00:00 GMT</pubDate>
-   <media:content medium="image" url="https://i.pinimg.com/originals/a0/62/8b/a0628b3a5a54955b2a0c44a7f0e74f4b.jpg"/>
-  </item>
-  
-  <item>
-   <title>
-    <![CDATA[ AN IMPERIAL EDICT: The ranks of the realm are decreed as F, D, C, B, A, S, SS, SR, SSS, and the supreme rank of Z. ]]>
-   </title>
-   <description>
-    <![CDATA[ <div><img src="https://cdna.artstation.com/p/assets/images/images/051/021/688/large/denis-zhbankov-asset.jpg?1656272522" style="width: 100%;" /><div>To preserve order, the High Council decrees the official hierarchy of all personnel. Know your station, its duties, and the path to ascension.</div></div> ]]>
-   </description>
-   <link>https://matrixcorp.news/edict-of-ranks-v3</link>
-   <guid isPermaLink="false">matrix-corp-herald-v3-002</guid>
-   <dc:creator>
-    <![CDATA[ The Grand Chancellor ]]>
-   </dc:creator>
-   <pubDate>Sat, 18 Oct 2025 23:30:00 GMT</pubDate>
-   <media:content medium="image" url="https://cdna.artstation.com/p/assets/images/images/051/021/688/large/denis-zhbankov-asset.jpg?1656272522"/>
-  </item>
-
- </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[ The Matrix.Corp Royal Herald ]]></title>
+    <description><![CDATA[ Official Edicts and Proclamations from the High Council of Matrix.Corp. ]]>
+    </description>
+    <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
+    <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml"/>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Oct 2025 02:00:00 GMT</lastBuildDate>
+    
+    <item>
+      <title><![CDATA[ A Royal Decree: The Official Herald of the Realm ]]></title>
+      <link>https://matrixcorp.news/royal-decree-herald-final</link>
+      <guid isPermaLink="false">matrix-corp-herald-final-001</guid>
+      <pubDate>Sun, 19 Oct 2025 02:00:00 GMT</pubDate>
+      <description><![CDATA[ By supreme order, this Royal Herald is now the sole voice for all official proclamations within the expansive realm of Matrix.Corp. Let all loyal subjects and vassals give due reverence to the announcements published here, for they are the direct will of the administration. These edicts shall shape the future of our great corporate empire and must be heeded by all. ]]></description>
+      <enclosure url="https://i.pinimg.com/originals/a0/62/8b/a0628b3a5a54955b2a0c44a7f0e74f4b.jpg" length="0" type="image/jpeg"/>
+    </item>
+    
+    <item>
+      <title><![CDATA[ An Imperial Edict: The Stations of the Realm ]]>
+      </title>
+      <link>https://matrixcorp.news/edict-of-ranks-final</link>
+      <guid isPermaLink="false">matrix-corp-herald-final-002</guid>
+      <pubDate>Sat, 18 Oct 2025 23:30:00 GMT</pubDate>
+      <description><![CDATA[ To preserve the immaculate order of the realm, the High Council has sanctioned the official hierarchy of all personnel. Know your station and its duties. The ranks are decreed as follows, from the lowest commoner to the highest sovereign authority: F, D, C, B, A, S, SS, SR, SSS, and the supreme rank of Z. Perform your duties with honor, and you may find your station elevated in due time. ]]></description>
+      <enclosure url="https://cdna.artstation.com/p/assets/images/images/051/021/688/large/denis-zhbankov-asset.jpg?1656272522" length="0" type="image/jpeg"/>
+    </item>
+    
+  </channel>
 </rss>
