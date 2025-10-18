@@ -1,14 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Matrix.Corp News</title>
-    <link>https://proxy-server-rkoy.onrender.com</link>
-    <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/matrix.xml" rel="self" type="application/rss+xml" />
-    <description>Matrix.Corp official news source updated by admins, providing in-depth operational and system-wide announcements.</description>
-    <language>en-us</language>
-    <pubDate>Sat, 18 Oct 2025 18:06:00 GMT</pubDate>
-    <lastBuildDate>Sat, 18 Oct 2025 18:28:00 GMT</lastBuildDate>
-    <generator>Zandy Wandy</generator>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+<channel>
+<title>
+<![CDATA[ Matrix.Corp News ]]>
+</title>
+<description>
+<![CDATA[ Matrix.Corp official news source all anouncements will come out here ]]>
+</description>
+<link>https://wccftech.com/topic/hardware/</link>
+<image>
+<url>https://cdn.wccftech.com/icons/apple-touch-icon.png</url>
+<title>Matrix.Corp News</title>
+<link>https://wccftech.com/topic/hardware/</link>
+</image>
+<generator>Matrix.Corp/generator>
+<lastBuildDate>Sat, 18 Oct 2025 19:22:00 GMT+8</lastBuildDate>
+<atom:link href="https://rss.app/feeds/OU7gNVdQkADsoJrR.xml" rel="self" type="application/rss+xml"/>
+<language>
+<![CDATA[ en-US ]]>
+</language>
 
     <item>
       <title>Digital ID Cards Commencing Distribution on 21/10/2025</title>
