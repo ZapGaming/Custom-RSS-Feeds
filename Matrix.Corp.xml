@@ -15,17 +15,8 @@
       <link>https://www.canva.com/design/DAG1GHo6RME/7e8uOAre0_jWsp6zJLuZNQ/edit?utm_content=DAG1GHo6RME&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton</link>
       <guid isPermaLink="true">https://www.canva.com/design/DAG1GHo6RME/7e8uOAre0_jWsp6zJLuZNQ/edit?utm_content=DAG1GHo6RME&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton</guid>
       <pubDate>Sat, 18 Oct 2025 18:06:00 GMT</pubDate>
-      <description>
-        Official Matrix.Corp Digital Identity Cards will be made available for download starting October 21st, 2025.
-      </description>
-      <content:encoded>
-        <![CDATA[
-          <!-- Inserted Image Tag for the Item -->
-          <img src="https://ik.imagekit.io/zapgaming/Admin%20(1).png?updatedAt=1759830681133" alt="Preview of the new digital ID card" style="display: block; max-width: 100%; height: auto; margin: 0 0 15px 0; border-radius: 8px;" />
-          <p>Official <strong>Matrix.Corp Digital Identity Cards</strong> will be made available for download starting October 21st, 2025. These verifiable credentials are tied directly to your user profile and provide cryptographic proof of your clearance and access level within the corporate network hierarchy.</p>
-          <p>User ID may be adjusted at any time by a admin</p>
-        ]]>
-      </content:encoded>
+      <description>Official Matrix.Corp Digital Identity Cards will be made available for download starting October 21st, 2025. These verifiable credentials are tied directly to your user profile and provide cryptographic proof of your clearance and access level within the corporate network hierarchy.</description>
+      <enclosure url="https://ik.imagekit.io/zapgaming/Admin%20(1).png?updatedAt=1759830681133" length="0" type="image/png" />
       <category>Important</category>
     </item>
 
@@ -34,15 +25,7 @@
       <link>https://proxy-server-rkoy.onrender.com</link>
       <guid isPermaLink="true">https://proxy-server-rkoy.onrender.com</guid>
       <pubDate>Sat, 18 Oct 2025 18:06:00 GMT</pubDate>
-      <description>
-       This feed serves as the single, authoritative source for all critical Matrix.Corp announcements.
-      </description>
-      <content:encoded>
-        <![CDATA[
-          <p>This feed serves as the single, authoritative source for all critical <strong>Matrix.Corp announcements</strong>, utilizing the RSS standard for maximum syndication and accessibility across diverse client applications.</p>
-          <p>By migrating our communications to this asynchronous, real-time protocol, we ensure that technical specifications, crucial policy updates, and operational status reports are instantly delivered to all authorized endpoints—from desktop readers to mobile aggregators. The use of this persistent feed eliminates reliance on traditional email distribution systems, drastically reducing latency and the risk of message filtering or delay. Please integrate this endpoint URL into your preferred feed reader to guarantee immediate ingestion of future high-priority corporate and system notifications.</p>
-        ]]>
-      </content:encoded>
+      <description>This feed serves as the single, authoritative source for all critical Matrix.Corp announcements, utilizing the RSS standard for maximum syndication and accessibility across diverse client applications.</description>
       <category>Welcome</category>
     </item>
 
