@@ -55,7 +55,7 @@
 
 
     
-    <!-- CUSTOM LOGO / CHANNEL IMAGE -->
+    <!-- CUSTOM LOGO / CHANNEL IMAGE --
     <image>
         <url>https://ik.imagekit.io/zapgaming/image_2025-10-19_090704639.png?updatedAt=1760836028811</url>
         <title><![CDATA[ The Grand Chancellery's Imperial Register of Matrix.Corp ]]></title>
@@ -70,11 +70,11 @@
       <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
       <guid isPermaLink="false">matrix-corp-herald-final-001</guid>
       <pubDate>Sun, 19 Oct 2025 09:34:30 +0800</pubDate>
-      <!-- Short summary for basic readers -->
+      <!-- Short summary for basic readers --
       <description><![CDATA[ The Official Herald is the sole channel for all official communication. ]]></description>
       <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" type="image/jpeg"/>
       <media:content url="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" type="image/jpeg"/>
-      <!-- FULL HTML CONTENT with explicit image tag -->
+      <!-- FULL HTML CONTENT with explicit image tag --
       <content:encoded><![CDATA[
         <img src="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" alt="Official Herald Authority" style="max-width: 100%; height: auto; display: block; margin-bottom: 1rem;" />
         <p>By the unassailable mandate of The Grand Chancellor, this sacred Register is hereby consecrated as the sole, immutable channel for all official communication within the dominion of Matrix.Corp. Let every loyal vassal and subject grant due and immediate fealty to these published articles, for they embody the direct, unwavering will of the Sovereign High Council. These decrees shall chart the destiny of our magnificent Corporate Empire, and disobedience shall not be suffered.</p>
@@ -86,11 +86,11 @@
       <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
       <guid isPermaLink="false">matrix-corp-herald-final-002</guid>
       <pubDate>Sun, 19 Oct 2025 09:34:00 +0800</pubDate>
-      <!-- Short summary for basic readers -->
+      <!-- Short summary for basic readers --
       <description><![CDATA[ The Sovereign High Council has formally sanctioned the absolute hierarchy of all loyal personnel. ]]></description>
       <enclosure url="https://ik.imagekit.io/zapgaming/ID.png?updatedAt=1760835844546" type="image/png"/>
       <media:content url="https://ik.imagekit.io/zapgaming/ID.png?updatedAt=1760835844546" type="image/png"/>
-      <!-- FULL HTML CONTENT with explicit image tag -->
+      <!-- FULL HTML CONTENT with explicit image tag --
       <content:encoded><![CDATA[
         <img src="https://ik.imagekit.io/zapgaming/ID.png?updatedAt=1760835844546" alt="Hierarchy of Station and Rank" style="max-width: 100%; height: auto; display: block; margin-bottom: 1rem;" />
         <p>To assure the immaculate and perpetual order of the Realm, the Sovereign High Council has formally sanctioned the absolute and unyielding hierarchy of all loyal personnel. Subjects are commanded to know their designated Station and its corresponding sacred duties without fail. The Ranks are decreed as follows, ascending from the lowest Commoner (F) through the grades of Service (D, C, B, A, S, SS, SR, SSS) to the pinnacle of authority, the Supreme Rank of Z. Execute your appointed duties with utmost diligence and honor, and ascension within the hierarchy may be granted by the Grace of the Chancellor.</p>
@@ -102,11 +102,11 @@
       <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
       <guid isPermaLink="false">matrix-corp-herald-final-003</guid>
       <pubDate>Sun, 19 Oct 2025 09:33:00 +0800</pubDate>
-      <!-- Short summary for basic readers -->
+      <!-- Short summary for basic readers --
       <description><![CDATA[ All subjects are required to carry their Universal Digital Identity Registry (UDIR) Card. ]]></description>
       <enclosure url="https://ik.imagekit.io/zapgaming/ID%20(1).png?updatedAt=1760835915247" type="image/png"/>
       <media:content url="https://ik.imagekit.io/zapgaming/ID%20(1).png?updatedAt=1760835915247" type="image/png"/>
-      <!-- FULL HTML CONTENT with explicit image tag -->
+      <!-- FULL HTML CONTENT with explicit image tag --
       <content:encoded><![CDATA[
         <img src="https://ik.imagekit.io/zapgaming/ID%20(1).png?updatedAt=1760835915247" alt="Universal Digital Identity Registry Card" style="max-width: 100%; height: auto; display: block; margin-bottom: 1rem;" />
         <p>By order of the Office of Personnel Authority, all subjects are henceforth required to carry their <strong>Universal Digital Identity Registry (UDIR) Card</strong> at all times. This singular identification document MUST clearly display the individual's <strong>Official Name</strong>, <strong>Assigned Role</strong>, <strong>Sanctioned Rank</strong> (as per Edict II), and a high-resolution, current-state <strong>ID Photo</strong>. Any failure to present this authorized identification upon demand by a superior officer or security automaton will result in immediate, non-appealable administrative review and possible demotion. Compliance is non-negotiable for system security.</p>
@@ -118,16 +118,13 @@
       <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
       <guid isPermaLink="false">matrix-corp-herald-final-004</guid>
       <pubDate>Sun, 19 Oct 2025 09:32:00 +0800</pubDate>
-      <!-- Short summary for basic readers -->
+      <!-- Short summary for basic readers --
       <description><![CDATA[ This decree initiates a provisional study into Joyful Computational Learning Protocols. ]]></description>
       <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Digital+Learning+Future" type="image/jpeg"/>
       <media:content url="https://placehold.co/600x400/171717/fefefe?text=Digital+Learning+Future" type="image/jpeg"/>
-      <!-- FULL HTML CONTENT with explicit image tag -->
+      <!-- FULL HTML CONTENT with explicit image tag --
       <content:encoded><![CDATA[
         <img src="https://placehold.co/600x400/171717/fefefe?text=Digital+Learning+Future" alt="Digital Learning Future" style="max-width: 100%; height: auto; display: block; margin-bottom: 1rem;" />
         <p>This decree initiates a high-priority, provisional study by the Department of Cognitive Optimization into the near-future viability of integrating advanced, computer-based instructional paradigms. The goal is to develop <strong>Joyful Computational Learning Protocols</strong> within all educational facilities. This potential shift aims to leverage immersive digital environments and gamified structures to enhance retention, engagement, and proficiency among personnel. The High Scepter is evaluating this possibility as a core strategic evolution for knowledge acquisition across the entire Corp.</p>
       ]]></content:encoded>
     </item>
-
-  </channel>
-</rss>
