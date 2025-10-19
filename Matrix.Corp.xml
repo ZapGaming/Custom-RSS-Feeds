@@ -4,47 +4,54 @@
     <title><![CDATA[ The Grand Chancellery's Imperial Register of Matrix.Corp ]]></title>
     <description><![CDATA[ Solemn Decrees and Absolute Proclamations Issued by The Grand Chancellor and the High Scepter of Matrix.Corp. Let them be universally heeded. ]]>
     </description>
-    <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
+    <!-- Link updated per previous mandate -->
+    <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
     <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
     <lastBuildDate>Sun, 19 Oct 2025 02:00:00 GMT</lastBuildDate>
     <generator>The Imperial Scriptorium of the Grand Chancellor</generator>
-    
+
     <item>
       <title><![CDATA[ Edict I: The Official Herald is Declared the Voice of Supreme Authority ]]></title>
-      <link>https://matrixcorp.news/royal-decree-herald-final</link>
+      <!-- Link updated per previous mandate -->
+      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
       <guid isPermaLink="false">matrix-corp-herald-final-001</guid>
       <pubDate>Sun, 19 Oct 2025 02:00:00 GMT</pubDate>
       <description><![CDATA[ By the unassailable mandate of The Grand Chancellor, this sacred Register is hereby consecrated as the sole, immutable channel for all official communication within the dominion of Matrix.Corp. Let every loyal vassal and subject grant due and immediate fealty to these published articles, for they embody the direct, unwavering will of the Sovereign High Council. These decrees shall chart the destiny of our magnificent Corporate Empire, and disobedience shall not be suffered. ]]></description>
-      <enclosure url="https://i.pinimg.com/originals/a0/62/8b/a0628b3a5a54955b2a0c44a7f0e74f4b.jpg" length="0" type="image/jpeg"/>
+      <!-- Image URL replaced with stable placeholder to ensure visibility -->
+      <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" length="0" type="image/jpeg"/>
     </item>
-    
+
     <item>
       <title><![CDATA[ Edict II: The Imposition of the Sacrosanct Hierarchy of Station and Rank ]]></title>
-      <link>https://matrixcorp.news/edict-of-ranks-final</link>
+      <!-- Link updated per previous mandate -->
+      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
       <guid isPermaLink="false">matrix-corp-herald-final-002</guid>
       <pubDate>Sat, 18 Oct 2025 23:30:00 GMT</pubDate>
       <description><![CDATA[ To assure the immaculate and perpetual order of the Realm, the Sovereign High Council has formally sanctioned the absolute and unyielding hierarchy of all loyal personnel. Subjects are commanded to know their designated Station and its corresponding sacred duties without fail. The Ranks are decreed as follows, ascending from the lowest Commoner (F) through the grades of Service (D, C, B, A, S, SS, SR, SSS) to the pinnacle of authority, the Supreme Rank of Z. Execute your appointed duties with utmost diligence and honor, and ascension within the hierarchy may be granted by the Grace of the Chancellor. ]]></description>
-      <enclosure url="https://cdna.artstation.com/p/assets/images/images/051/021/688/large/denis-zhbankov-asset.jpg?1656272522" length="0" type="image/jpeg"/>
+      <!-- Image URL replaced with stable placeholder to ensure visibility -->
+      <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Sacrosanct+Hierarchy+Rank" length="0" type="image/jpeg"/>
     </item>
-    
+
     <item>
       <title><![CDATA[ Edict III: Mandate for the Universal Digital Identity Registry (UDIR) ]]></title>
-      <link>https://matrixcorp.news/udiregistry-mandate</link>
+      <!-- Link updated per previous mandate -->
+      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
       <guid isPermaLink="false">matrix-corp-herald-final-003</guid>
       <pubDate>Fri, 17 Oct 2025 21:00:00 GMT</pubDate>
       <description><![CDATA[ By order of the Office of Personnel Authority, all subjects are henceforth required to carry their **Universal Digital Identity Registry (UDIR) Card** at all times. This singular identification document MUST clearly display the individual's **Official Name**, **Assigned Role**, **Sanctioned Rank** (as per Edict II), and a high-resolution, current-state **ID Photo**. Any failure to present this authorized identification upon demand by a superior officer or security automaton will result in immediate, non-appealable administrative review and possible demotion. Compliance is non-negotiable for system security. ]]></description>
       <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Digital+ID+Mandate" length="0" type="image/jpeg"/>
     </item>
-    
+
     <item>
       <title><![CDATA[ Edict IV: Provisional Study into Joyful Computational Learning Protocols ]]></title>
-      <link>https://matrixcorp.news/edu-matrix-protocol</link>
+      <!-- Link updated per previous mandate -->
+      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
       <guid isPermaLink="false">matrix-corp-herald-final-004</guid>
       <pubDate>Thu, 16 Oct 2025 18:00:00 GMT</pubDate>
       <description><![CDATA[ This decree initiates a high-priority, provisional study by the Department of Cognitive Optimization into the near-future viability of integrating advanced, computer-based instructional paradigms. The goal is to develop **Joyful Computational Learning Protocols** within all educational facilities. This potential shift aims to leverage immersive digital environments and gamified structures to enhance retention, engagement, and proficiency among personnel. The High Scepter is evaluating this possibility as a core strategic evolution for knowledge acquisition across the entire Corp. ]]></description>
       <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Digital+Learning+Future" length="0" type="image/jpeg"/>
     </item>
-    
+
   </channel>
 </rss>
