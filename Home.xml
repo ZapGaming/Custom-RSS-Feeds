@@ -10,7 +10,7 @@
     
     <!-- To-Do Item Example -->
     <item>
-      <title><![CDATA[ To-Do: Finish report for project ]]></title>
+      <title><![CDATA[ Build Workstation ]]></title>
       <link>https://example.com/item1</link>
       <guid isPermaLink="true">https://example.com/item1</guid>
       <pubDate>Sat, 18 Oct 2025 21:00:00 GMT</pubDate>
@@ -24,7 +24,7 @@
     
     <!-- Note Item Example -->
     <item>
-      <title><![CDATA[ Note: Idea for new website design ]]></title>
+      <title><![CDATA[ goo goo ga ga ]]></title>
       <link>https://example.com/item2</link>
       <guid isPermaLink="true">https://example.com/item2</guid>
       <pubDate>Fri, 17 Oct 2025 20:00:00 GMT</pubDate>
