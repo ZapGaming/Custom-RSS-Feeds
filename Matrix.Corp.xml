@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title><![CDATA[ The Grand Chancellery's Imperial Register ]]></title>
     <description><![CDATA[ Solemn Decrees and Absolute Proclamations from the High Council of Matrix.Corp. ]]></description>
     <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
     <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml" />
     <language>en-gb</language>
-    <lastBuildDate>Sun, 19 Oct 2025 13:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Oct 2025 14:00:00 GMT</lastBuildDate>
     
     <item>
       <title><![CDATA[ Edict VI: On Unquestioning Compliance and the Grave Consequences of Insubordination ]]></title>
@@ -14,6 +14,7 @@
       <guid isPermaLink="true">https://gemini.google.com/</guid>
       <pubDate>Sun, 19 Oct 2025 11:00:00 GMT</pubDate>
       <description><![CDATA[ This edict serves as a solemn warning on the absolute necessity of compliance. ]]></description>
+      <media:content url="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg" medium="image"/>
       <content:encoded><![CDATA[
         <p>Let it be known that adherence to all edicts published within this Imperial Register is mandatory and non-negotiable. <strong>Insubordination, in any form, will be met with immediate and severe sanction.</strong> Such actions are considered a direct threat to the stability of the realm and will be addressed with summary administrative review, which may result in rank demotion, reassignment to subordinate territories, or complete expungement from the Imperial Register.</p>
       ]]></content:encoded>
@@ -25,6 +26,7 @@
       <guid isPermaLink="true">https://www.perplexity.ai/</guid>
       <pubDate>Sun, 19 Oct 2025 10:59:00 GMT</pubDate>
       <description><![CDATA[ All corporate resources are the property of the Chancellery; waste is an act of sedition. ]]></description>
+      <media:content url="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg" medium="image"/>
       <content:encoded><![CDATA[
         <p>All resources, whether material, digital, or temporal, are the exclusive property of the Chancellery, entrusted to personnel for the execution of their duties. <strong>The practice of waste, in any capacity, is hereby declared an act of sedition.</strong> All subjects are commanded to exercise extreme prejudice in the conservation and efficient use of corporate assets. Redundancy and inefficiency will be purged without mercy.</p>
       ]]></content:encoded>
@@ -36,6 +38,7 @@
       <guid isPermaLink="true">https://claude.ai/</guid>
       <pubDate>Sun, 19 Oct 2025 10:58:00 GMT</pubDate>
       <description><![CDATA[ All inter-personnel communication must adhere to the Imperial standard of encrypted formality. ]]></description>
+      <media:content url="https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg" medium="image"/>
       <content:encoded><![CDATA[
         <p>To preserve operational integrity, all inter-personnel communication is to be conducted exclusively through sanctioned, end-to-end encrypted channels. <strong>Informal and unsecured messaging is henceforth forbidden.</strong> Every dispatch must be formal, concise, and directly related to official duties. Casual discourse compromises security and is an inefficient use of corporate resources. All network traffic is subject to audit by the Office of Imperial Scrutiny.</p>
       ]]></content:encoded>
@@ -47,6 +50,7 @@
       <guid isPermaLink="true">https://www.midjourney.com/</guid>
       <pubDate>Sun, 19 Oct 2025 09:58:00 GMT</pubDate>
       <description><![CDATA[ All subjects are required to carry and present their Universal Digital Identity Registry (UDIR) Card. ]]></description>
+      <media:content url="https://images.pexels.com/photos/6153367/pexels-photo-6153367.jpeg" medium="image"/>
       <content:encoded><![CDATA[
         <p>By order of the Office of Personnel Authority, all subjects are required to carry their <strong>Universal Digital Identity Registry (UDIR) Card</strong>. This document MUST clearly display your Official Name, Assigned Role, Sanctioned Rank, and ID Photo. Failure to present this identification upon demand will result in immediate administrative review.</p>
       ]]></content:encoded>
@@ -60,6 +64,7 @@
       https://github.com/features/copilot</guid>
       <pubDate>Sun, 19 Oct 2025 09:57:00 GMT</pubDate>
       <description><![CDATA[ The Sovereign High Council has formally sanctioned the absolute hierarchy of all loyal personnel. ]]></description>
+      <media:content url="https://images.pexels.com/photos/1036808/pexels-photo-1036808.jpeg" medium="image"/>
       <content:encoded><![CDATA[
         <p>To assure the immaculate and perpetual order of the Realm, the Sovereign High Council has sanctioned the absolute hierarchy of all personnel. The Ranks are decreed as follows, ascending from the lowest Commoner through the grades of Service: <strong>F, D, C, B, A, S, SS, SR, SSS,</strong> and the pinnacle of authority, the <strong>Supreme Rank of Z.</strong></p>
       ]]></content:encoded>
@@ -71,6 +76,7 @@
       <guid isPermaLink="true">https://chat.openai.com/</guid>
       <pubDate>Sun, 19 Oct 2025 09:56:00 GMT</pubDate>
       <description><![CDATA[ By unassailable mandate, this Register is now the sole channel for all official communication. ]]></description>
+      <media:content url="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" medium="image"/>
       <content:encoded><![CDATA[
         <p>By the unassailable mandate of The Grand Chancellor, this sacred Register is hereby consecrated as the <strong>sole, immutable channel</strong> for all official communication within the dominion of Matrix.Corp. Let every loyal vassal and subject grant due and immediate fealty to these published articles, for they embody the direct will of the Sovereign High Council.</p>
       ]]></content:encoded>
