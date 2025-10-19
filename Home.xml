@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Home &amp; Task List</title>
-    <description>A personal list of tasks and reminders.</description>
-    <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
-    <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml"/>
+    <title><![CDATA[ My To-Do & Notes List ]]></title>
+    <description><![CDATA[ A personal list of tasks and notes. ]]></description>
+    <link>https://example.com/notes.xml</link>
+    <atom:link href="https://example.com/notes.xml" rel="self" type="application/rss+xml" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Oct 2025 03:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Oct 2025 21:00:00 GMT</lastBuildDate>
     
+    <!-- To-Do Item Example -->
     <item>
-      <title>1. Meeting with the High Council at 3 PM.</title>
-      <link>https://matrixcorp.news/placeholder</link>
-      <description>...</description>
-      <guid isPermaLink="false">task-item-001</guid>
+      <title><![CDATA[ To-Do: Finish report for project ]]></title>
+      <link>https://example.com/item1</link>
+      <guid isPermaLink="true">https://example.com/item1</guid>
+      <pubDate>Sat, 18 Oct 2025 21:00:00 GMT</pubDate>
+      <description><![CDATA[ Remember to include the Q3 financial data. ]]></description>
+      <content:encoded><![CDATA[
+        <!-- You can add an image tag here if needed, like: <img src="URL_TO_YOUR_IMAGE" alt="Description" /> -->
+        <p><strong>Details:</strong> This is a high-priority task. The report must be submitted by the end of the day.</p>
+        <p>Follow up with the team for their input.</p>
+      ]]></content:encoded>
+    </item>
+    
+    <!-- Note Item Example -->
+    <item>
+      <title><![CDATA[ Note: Idea for new website design ]]></title>
+      <link>https://example.com/item2</link>
+      <guid isPermaLink="true">https://example.com/item2</guid>
+      <pubDate>Fri, 17 Oct 2025 20:00:00 GMT</pubDate>
+      <description><![CDATA[ A brief summary or thought about the note. ]]></description>
+      <content:encoded><![CDATA[
+        <!-- You can add an image tag here if needed -->
+        <p>The new design should feature a minimalist aesthetic with a clean, grid-based layout. Use a modern, sans-serif typeface and a simple color palette.</p>
+      ]]></content:encoded>
     </item>
 
-    <item>
-      <title>2. Review the Q4 Realm Stability Reports.</title>
-      <link>https://matrixcorp.news/placeholder</link>
-      <description>...</description>
-      <guid isPermaLink="false">task-item-002</guid>
-    </item>
-    
-    <item>
-      <title>3. Decree the new security protocols by end of day.</title>
-      <link>https://matrixcorp.news/placeholder</link>
-      <description>...</description>
-      <guid isPermaLink="false">task-item-003</guid>
-    </item>
-
-    <item>
-      <title>4. Schedule the rank elevation ceremony.</title>
-      <link>https://matrixcorp.news/placeholder</link>
-      <description>...</description>
-      <guid isPermaLink="false">task-item-004</guid>
-    </item>
-    
   </channel>
 </rss>
