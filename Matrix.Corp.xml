@@ -3,18 +3,17 @@
   <channel>
     <title><![CDATA[ The Grand Chancellery's Imperial Register ]]></title>
     <description><![CDATA[ Solemn Decrees and Absolute Proclamations from the High Council of Matrix.Corp. ]]></description>
-    <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
+    <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
     <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml" />
     <language>en-gb</language>
-    <lastBuildDate>Sun, 19 Oct 2025 11:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Oct 2025 13:00:00 GMT</lastBuildDate>
     
     <item>
       <title><![CDATA[ Edict VI: On Unquestioning Compliance and the Grave Consequences of Insubordination ]]></title>
-      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-      <guid isPermaLink="true">https://discord.com/channels/1405823672736022649/1429270669543342101</guid>
+      <link>https://gemini.google.com/</link>
+      <guid isPermaLink="true">https://gemini.google.com/</guid>
       <pubDate>Sun, 19 Oct 2025 11:00:00 GMT</pubDate>
-      <description><![CDATA[ This edict serves as a solemn warning on the absolute necessity of compliance. ]]>
-      </description>
+      <description><![CDATA[ This edict serves as a solemn warning on the absolute necessity of compliance. ]]></description>
       <content:encoded><![CDATA[
         <p>Let it be known that adherence to all edicts published within this Imperial Register is mandatory and non-negotiable. <strong>Insubordination, in any form, will be met with immediate and severe sanction.</strong> Such actions are considered a direct threat to the stability of the realm and will be addressed with summary administrative review, which may result in rank demotion, reassignment to subordinate territories, or complete expungement from the Imperial Register.</p>
       ]]></content:encoded>
@@ -22,11 +21,10 @@
 
     <item>
       <title><![CDATA[ Edict V: A Proclamation on Resource Discipline and the Abolition of Wasteful Practices ]]></title>
-      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-      <guid isPermaLink="true">https://discord.com/channels/1405823672736022649/1429270669543342101</guid>
+      <link>https://www.perplexity.ai/</link>
+      <guid isPermaLink="true">https://www.perplexity.ai/</guid>
       <pubDate>Sun, 19 Oct 2025 10:59:00 GMT</pubDate>
-      <description><![CDATA[ All corporate resources are the property of the Chancellery; waste is an act of sedition. ]]>
-      </description>
+      <description><![CDATA[ All corporate resources are the property of the Chancellery; waste is an act of sedition. ]]></description>
       <content:encoded><![CDATA[
         <p>All resources, whether material, digital, or temporal, are the exclusive property of the Chancellery, entrusted to personnel for the execution of their duties. <strong>The practice of waste, in any capacity, is hereby declared an act of sedition.</strong> All subjects are commanded to exercise extreme prejudice in the conservation and efficient use of corporate assets. Redundancy and inefficiency will be purged without mercy.</p>
       ]]></content:encoded>
@@ -34,11 +32,10 @@
 
     <item>
       <title><![CDATA[ Edict IV: The Mandate for Secure and Formal Communication Protocols Across the Realm ]]></title>
-      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-      <guid isPermaLink="true">https://discord.com/channels/1405823672736022649/1429270669543342101</guid>
+      <link>https://claude.ai/</link>
+      <guid isPermaLink="true">https://claude.ai/</guid>
       <pubDate>Sun, 19 Oct 2025 10:58:00 GMT</pubDate>
-      <description><![CDATA[ All inter-personnel communication must adhere to the Imperial standard of encrypted formality. ]]>
-      </description>
+      <description><![CDATA[ All inter-personnel communication must adhere to the Imperial standard of encrypted formality. ]]></description>
       <content:encoded><![CDATA[
         <p>To preserve operational integrity, all inter-personnel communication is to be conducted exclusively through sanctioned, end-to-end encrypted channels. <strong>Informal and unsecured messaging is henceforth forbidden.</strong> Every dispatch must be formal, concise, and directly related to official duties. Casual discourse compromises security and is an inefficient use of corporate resources. All network traffic is subject to audit by the Office of Imperial Scrutiny.</p>
       ]]></content:encoded>
@@ -46,8 +43,8 @@
     
     <item>
       <title><![CDATA[ Edict III: The Universal Digital Identity Registry (UDIR) is Now Mandatory for All Personnel ]]></title>
-      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-      <guid isPermaLink="true">https://discord.com/channels/1405823672736022649/1429270669543342101</guid>
+      <link>https://www.midjourney.com/</link>
+      <guid isPermaLink="true">https://www.midjourney.com/</guid>
       <pubDate>Sun, 19 Oct 2025 09:58:00 GMT</pubDate>
       <description><![CDATA[ All subjects are required to carry and present their Universal Digital Identity Registry (UDIR) Card. ]]></description>
       <content:encoded><![CDATA[
@@ -57,8 +54,10 @@
     
     <item>
       <title><![CDATA[ Edict II: The Imposition of the Sacrosanct Hierarchy of Rank from Commoner (F) to Supreme (Z) ]]></title>
-      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-      <guid isPermaLink="true">https://discord.com/channels/1405823672736022649/1429270669543342101</guid>
+      <link>
+      https://github.com/features/copilot</link>
+      <guid isPermaLink="true">
+      https://github.com/features/copilot</guid>
       <pubDate>Sun, 19 Oct 2025 09:57:00 GMT</pubDate>
       <description><![CDATA[ The Sovereign High Council has formally sanctioned the absolute hierarchy of all loyal personnel. ]]></description>
       <content:encoded><![CDATA[
@@ -68,8 +67,8 @@
 
     <item>
       <title><![CDATA[ Edict I: The Official Herald is Declared the Sole Voice of the Supreme Authority of the Chancellery ]]></title>
-      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-      <guid isPermaLink="true">https://discord.com/channels/1405823672736022649/1429270669543342101</guid>
+      <link>https://chat.openai.com/</link>
+      <guid isPermaLink="true">https://chat.openai.com/</guid>
       <pubDate>Sun, 19 Oct 2025 09:56:00 GMT</pubDate>
       <description><![CDATA[ By unassailable mandate, this Register is now the sole channel for all official communication. ]]></description>
       <content:encoded><![CDATA[
