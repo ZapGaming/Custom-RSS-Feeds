@@ -12,6 +12,31 @@
     <lastBuildDate>Sun, 19 Oct 2025 10:15:00 +0800</lastBuildDate>
     <generator>The Imperial Scriptorium of the Grand Chancellor</generator>
 
+    <image>
+        <url>https://ik.imagekit.io/zapgaming/image_2025-10-19_090704639.png?updatedAt=1760836028811</url>
+        <title><![CDATA[ The Grand Chancellery's Imperial Register of Matrix.Corp ]]></title>
+        <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
+        <width>144</width>
+        <height>144</height>
+        <description>The Official Seal of the Matrix.Corp Chancellery</description>
+    </image>
+
+    <item>
+      <title><![CDATA[ Edict I: The Official Herald is Declared the Voice of Supreme Authority ]]></title>
+      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
+      <guid isPermaLink="false">matrix-corp-herald-final-001</guid>
+      <pubDate>Sun, 19 Oct 2025 09:34:30 +0800</pubDate>
+      <!-- Short summary for basic readers -->
+      <description><![CDATA[ The Official Herald is the sole channel for all official communication. ]]></description>
+      <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" type="image/jpeg"/>
+      <media:content url="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" type="image/jpeg"/>
+      <!-- FULL HTML CONTENT with explicit image tag -->
+      <content:encoded><![CDATA[
+        <img src="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" alt="Official Herald Authority" style="max-width: 100%; height: auto; display: block; margin-bottom: 1rem;" />
+        <p>By the unassailable mandate of The Grand Chancellor, this sacred Register is hereby consecrated as the sole, immutable channel for all official communication within the dominion of Matrix.Corp. Let every loyal vassal and subject grant due and immediate fealty to these published articles, for they embody the direct, unwavering will of the Sovereign High Council. These decrees shall chart the destiny of our magnificent Corporate Empire, and disobedience shall not be suffered.</p>
+      ]]></content:encoded>
+    </item>
+    
     <item>
       <title><![CDATA[ Edict II: The Imposition of the Sacrosanct Hierarchy of Station and Rank ]]></title>
       <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
@@ -58,31 +83,9 @@
 
 
     
-    <!-- CUSTOM LOGO / CHANNEL IMAGE -->
-    <image>
-        <url>https://ik.imagekit.io/zapgaming/image_2025-10-19_090704639.png?updatedAt=1760836028811</url>
-        <title><![CDATA[ The Grand Chancellery's Imperial Register of Matrix.Corp ]]></title>
-        <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-        <width>144</width>
-        <height>144</height>
-        <description>The Official Seal of the Matrix.Corp Chancellery</description>
-    </image>
 
-    <item>
-      <title><![CDATA[ Edict I: The Official Herald is Declared the Voice of Supreme Authority ]]></title>
-      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-      <guid isPermaLink="false">matrix-corp-herald-final-001</guid>
-      <pubDate>Sun, 19 Oct 2025 09:34:30 +0800</pubDate>
-      <!-- Short summary for basic readers -->
-      <description><![CDATA[ The Official Herald is the sole channel for all official communication. ]]></description>
-      <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" type="image/jpeg"/>
-      <media:content url="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" type="image/jpeg"/>
-      <!-- FULL HTML CONTENT with explicit image tag -->
-      <content:encoded><![CDATA[
-        <img src="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" alt="Official Herald Authority" style="max-width: 100%; height: auto; display: block; margin-bottom: 1rem;" />
-        <p>By the unassailable mandate of The Grand Chancellor, this sacred Register is hereby consecrated as the sole, immutable channel for all official communication within the dominion of Matrix.Corp. Let every loyal vassal and subject grant due and immediate fealty to these published articles, for they embody the direct, unwavering will of the Sovereign High Council. These decrees shall chart the destiny of our magnificent Corporate Empire, and disobedience shall not be suffered.</p>
-      ]]></content:encoded>
-    </item>
+
+
 
     <item>
       <title><![CDATA[ Edict II: The Imposition of the Sacrosanct Hierarchy of Station and Rank ]]></title>
