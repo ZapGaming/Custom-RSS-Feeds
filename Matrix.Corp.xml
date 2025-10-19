@@ -1,73 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title><![CDATA[ The Grand Chancellery's Imperial Register of Matrix.Corp ]]></title>
-    <description><![CDATA[ Solemn Decrees and Absolute Proclamations Issued by The Grand Chancellor and the High Scepter of Matrix.Corp. Let them be universally heeded. ]]>
-    </description>
-    <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-    <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml"/>
+    <title><![CDATA[ The Grand Chancellery's Imperial Register ]]></title>
+    <description><![CDATA[ Solemn Decrees and Absolute Proclamations from the High Council of Matrix.Corp. ]]></description>
+    <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
+    <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml" />
     <language>en-gb</language>
-    <lastBuildDate>Sun, 19 Oct 2025 09:35:00 +0800</lastBuildDate>
-    <generator>The Imperial Scriptorium of the Grand Chancellor</generator>
-
-    <image>
-        <url>https://ik.imagekit.io/zapgaming/image_2025-10-19_090704639.png?updatedAt=1760836028811</url>
-        <title><![CDATA[ The Grand Chancellery's Imperial Register of Matrix.Corp ]]></title>
-        <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-        <width>144</width>
-        <height>144</height>
-        <description>The Official Seal of the Matrix.Corp Chancellery</description>
-    </image>
-
+    <lastBuildDate>Sun, 19 Oct 2025 10:30:00 GMT</lastBuildDate>
+    
     <item>
-      <title><![CDATA[ Edict I: The Official Herald is Declared the Voice of Supreme Authority ]]></title>
-      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-      <guid isPermaLink="false">matrix-corp-herald-final-001</guid>
-      <pubDate>Sun, 19 Oct 2025 09:34:30 +0800</pubDate>
-      <description><![CDATA[ The Official Herald is the sole channel for all official communication. ]]></description>
-      <media:content url="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" type="image/jpeg"/>
+      <title><![CDATA[ Edict I: The Official Herald is Declared Supreme Authority ]]></title>
+      <link>https://matrixcorp.news/edict-herald-authority</link>
+      <guid isPermaLink="true">https://matrixcorp.news/edict-herald-authority</guid>
+      <pubDate>Sun, 19 Oct 2025 10:00:00 GMT</pubDate>
+      <description><![CDATA[ By unassailable mandate, this Register is now the sole channel for all official communication. ]]></description>
       <content:encoded><![CDATA[
-        <img src="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" alt="Official Herald Authority" style="max-width: 100%; height: auto; display: block; margin-bottom: 1rem;" />
-        <p>By the unassailable mandate of The Grand Chancellor, this sacred Register is hereby consecrated as the sole, immutable channel for all official communication within the dominion of Matrix.Corp. Let every loyal vassal and subject grant due and immediate fealty to these published articles, for they embody the direct, unwavering will of the Sovereign High Council. These decrees shall chart the destiny of our magnificent Corporate Empire, and disobedience shall not be suffered.</p>
+        <img src="https://i.pinimg.com/originals/a0/62/8b/a0628b3a5a54955b2a0c44a7f0e74f4b.jpg" alt="Official Herald Authority" style="max-width: 100%; height: auto; border-radius: 8px;" />
+        <p>By the unassailable mandate of The Grand Chancellor, this sacred Register is hereby consecrated as the <strong>sole, immutable channel</strong> for all official communication within the dominion of Matrix.Corp. Let every loyal vassal and subject grant due and immediate fealty to these published articles, for they embody the direct will of the Sovereign High Council.</p>
       ]]></content:encoded>
     </item>
     
     <item>
-      <title><![CDATA[ Edict II: The Imposition of the Sacrosanct Hierarchy of Station and Rank ]]></title>
-      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-      <guid isPermaLink="false">matrix-corp-herald-final-002</guid>
-      <pubDate>Sun, 19 Oct 2025 09:34:00 +0800</pubDate>
+      <title><![CDATA[ Edict II: The Imposition of the Sacrosanct Hierarchy of Rank ]]></title>
+      <link>https://matrixcorp.news/edict-hierarchy-of-rank</link>
+      <guid isPermaLink="true">https://matrixcorp.news/edict-hierarchy-of-rank</guid>
+      <pubDate>Sun, 19 Oct 2025 09:59:00 GMT</pubDate>
       <description><![CDATA[ The Sovereign High Council has formally sanctioned the absolute hierarchy of all loyal personnel. ]]></description>
-      <media:content url="https://ik.imagekit.io/zapgaming/ID.png?updatedAt=1760835844546" type="image/png"/>
       <content:encoded><![CDATA[
-        <img src="https://ik.imagekit.io/zapgaming/ID.png?updatedAt=1760835844546" alt="Hierarchy of Station and Rank" style="max-width: 100%; height: auto; display: block; margin-bottom: 1rem;" />
-        <p>To assure the immaculate and perpetual order of the Realm, the Sovereign High Council has formally sanctioned the absolute and unyielding hierarchy of all loyal personnel. Subjects are commanded to know their designated Station and its corresponding sacred duties without fail. The Ranks are decreed as follows, ascending from the lowest Commoner (F) through the grades of Service (D, C, B, A, S, SS, SR, SSS) to the pinnacle of authority, the Supreme Rank of Z. Execute your appointed duties with utmost diligence and honor, and ascension within the hierarchy may be granted by the Grace of the Chancellor.</p>
+        <img src="https://cdna.artstation.com/p/assets/images/images/051/021/688/large/denis-zhbankov-asset.jpg?1656272522" alt="Hierarchy of Station and Rank" style="max-width: 100%; height: auto; border-radius: 8px;" />
+        <p>To assure the immaculate and perpetual order of the Realm, the Sovereign High Council has sanctioned the absolute hierarchy of all personnel. The Ranks are decreed as follows, ascending from the lowest Commoner through the grades of Service: <strong>F, D, C, B, A, S, SS, SR, SSS,</strong> and the pinnacle of authority, the <strong>Supreme Rank of Z.</strong></p>
       ]]></content:encoded>
     </item>
 
     <item>
       <title><![CDATA[ Edict III: Mandate for the Universal Digital Identity Registry (UDIR) ]]></title>
-      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-      <guid isPermaLink="false">matrix-corp-herald-final-003</guid>
-      <pubDate>Sun, 19 Oct 2025 09:33:00 +0800</pubDate>
+      <link>https://matrixcorp.news/edict-udir-mandate</link>
+      <guid isPermaLink="true">https://matrixcorp.news/edict-udir-mandate</guid>
+      <pubDate>Sun, 19 Oct 2025 09:58:00 GMT</pubDate>
       <description><![CDATA[ All subjects are required to carry their Universal Digital Identity Registry (UDIR) Card. ]]></description>
-      <media:content url="https://ik.imagekit.io/zapgaming/ID%20(1).png?updatedAt=1760835915247" type="image/png"/>
       <content:encoded><![CDATA[
-        <img src="https://ik.imagekit.io/zapgaming/ID%20(1).png?updatedAt=1760835915247" alt="Universal Digital Identity Registry Card" style="max-width: 100%; height: auto; display: block; margin-bottom: 1rem;" />
-        <p>By order of the Office of Personnel Authority, all subjects are henceforth required to carry their <strong>Universal Digital Identity Registry (UDIR) Card</strong> at all times. This singular identification document MUST clearly display the individual's <strong>Official Name</strong>, <strong>Assigned Role</strong>, <strong>Sanctioned Rank</strong> (as per Edict II), and a high-resolution, current-state <strong>ID Photo</strong>. Any failure to present this authorized identification upon demand by a superior officer or security automaton will result in immediate, non-appealable administrative review and possible demotion. Compliance is non-negotiable for system security.</p>
-      ]]></content:encoded>
-    </item>
-
-    <item>
-      <title><![CDATA[ Edict IV: Provisional Study into Joyful Computational Learning Protocols ]]></title>
-      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
-      <guid isPermaLink="false">matrix-corp-herald-final-004</guid>
-      <pubDate>Sun, 19 Oct 2025 09:32:00 +0800</pubDate>
-      <description><![CDATA[ This decree initiates a provisional study into Joyful Computational Learning Protocols. ]]></description>
-      <media:content url="https://placehold.co/600x400/171717/fefefe?text=Digital+Learning+Future" type="image/jpeg"/>
-      <content:encoded><![CDATA[
-        <img src="https://placehold.co/600x400/171717/fefefe?text=Digital+Learning+Future" alt="Digital Learning Future" style="max-width: 100%; height: auto; display: block; margin-bottom: 1rem;" />
-        <p>This decree initiates a high-priority, provisional study by the Department of Cognitive Optimization into the near-future viability of integrating advanced, computer-based instructional paradigms. The goal is to develop <strong>Joyful Computational Learning Protocols</strong> within all educational facilities. This potential shift aims to leverage immersive digital environments and gamified structures to enhance retention, engagement, and proficiency among personnel. The High Scepter is evaluating this possibility as a core strategic evolution for knowledge acquisition across the entire Corp.</p>
+        <img src="https://ik.imagekit.io/zapgaming/ID%20(1).png?updatedAt=1760835915247" alt="Universal Digital Identity Registry Card" style="max-width: 100%; height: auto; border-radius: 8px;" />
+        <p>By order of the Office of Personnel Authority, all subjects are required to carry their <strong>Universal Digital Identity Registry (UDIR) Card</strong>. This document MUST clearly display your Official Name, Assigned Role, Sanctioned Rank, and ID Photo. Failure to present this identification upon demand will result in immediate administrative review.</p>
       ]]></content:encoded>
     </item>
 
