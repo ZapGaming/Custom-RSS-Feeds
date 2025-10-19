@@ -6,41 +6,74 @@
     <link>https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml</link>
     <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml" />
     <language>en-gb</language>
-    <lastBuildDate>Sun, 19 Oct 2025 10:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Oct 2025 11:00:00 GMT</lastBuildDate>
     
     <item>
-      <title><![CDATA[ Edict I: The Official Herald is Declared Supreme Authority ]]></title>
-      <link>https://matrixcorp.news/edict-herald-authority</link>
-      <guid isPermaLink="true">https://matrixcorp.news/edict-herald-authority</guid>
-      <pubDate>Sun, 19 Oct 2025 10:00:00 GMT</pubDate>
-      <description><![CDATA[ By unassailable mandate, this Register is now the sole channel for all official communication. ]]></description>
+      <title><![CDATA[ Edict VI: On Unquestioning Compliance and the Grave Consequences of Insubordination ]]></title>
+      <link>https://matrixcorp.news/edict-compliance-consequences</link>
+      <guid isPermaLink="true">https://matrixcorp.news/edict-compliance-consequences</guid>
+      <pubDate>Sun, 19 Oct 2025 11:00:00 GMT</pubDate>
+      <description><![CDATA[ This edict serves as a solemn warning on the absolute necessity of compliance. ]]>
+      </description>
       <content:encoded><![CDATA[
-        <img src="https://i.pinimg.com/originals/a0/62/8b/a0628b3a5a54955b2a0c44a7f0e74f4b.jpg" alt="Official Herald Authority" style="max-width: 100%; height: auto; border-radius: 8px;" />
-        <p>By the unassailable mandate of The Grand Chancellor, this sacred Register is hereby consecrated as the <strong>sole, immutable channel</strong> for all official communication within the dominion of Matrix.Corp. Let every loyal vassal and subject grant due and immediate fealty to these published articles, for they embody the direct will of the Sovereign High Council.</p>
+        <p>Let it be known that adherence to all edicts published within this Imperial Register is mandatory and non-negotiable. <strong>Insubordination, in any form, will be met with immediate and severe sanction.</strong> Such actions are considered a direct threat to the stability of the realm and will be addressed with summary administrative review, which may result in rank demotion, reassignment to subordinate territories, or complete expungement from the Imperial Register.</p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title><![CDATA[ Edict V: A Proclamation on Resource Discipline and the Abolition of Wasteful Practices ]]></title>
+      <link>https://matrixcorp.news/edict-resource-discipline</link>
+      <guid isPermaLink="true">https://matrixcorp.news/edict-resource-discipline</guid>
+      <pubDate>Sun, 19 Oct 2025 10:59:00 GMT</pubDate>
+      <description><![CDATA[ All corporate resources are the property of the Chancellery; waste is an act of sedition. ]]>
+      </description>
+      <content:encoded><![CDATA[
+        <p>All resources, whether material, digital, or temporal, are the exclusive property of the Chancellery, entrusted to personnel for the execution of their duties. <strong>The practice of waste, in any capacity, is hereby declared an act of sedition.</strong> All subjects are commanded to exercise extreme prejudice in the conservation and efficient use of corporate assets. Redundancy and inefficiency will be purged without mercy.</p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title><![CDATA[ Edict IV: The Mandate for Secure and Formal Communication Protocols Across the Realm ]]></title>
+      <link>https://matrixcorp.news/edict-communication-protocols</link>
+      <guid isPermaLink="true">https://matrixcorp.news/edict-communication-protocols</guid>
+      <pubDate>Sun, 19 Oct 2025 10:58:00 GMT</pubDate>
+      <description><![CDATA[ All inter-personnel communication must adhere to the Imperial standard of encrypted formality. ]]>
+      </description>
+      <content:encoded><![CDATA[
+        <p>To preserve operational integrity, all inter-personnel communication is to be conducted exclusively through sanctioned, end-to-end encrypted channels. <strong>Informal and unsecured messaging is henceforth forbidden.</strong> Every dispatch must be formal, concise, and directly related to official duties. Casual discourse compromises security and is an inefficient use of corporate resources. All network traffic is subject to audit by the Office of Imperial Scrutiny.</p>
       ]]></content:encoded>
     </item>
     
     <item>
-      <title><![CDATA[ Edict II: The Imposition of the Sacrosanct Hierarchy of Rank ]]></title>
+      <title><![CDATA[ Edict III: The Universal Digital Identity Registry (UDIR) is Now Mandatory for All Personnel ]]></title>
+      <link>https://matrixcorp.news/edict-udir-mandate</link>
+      <guid isPermaLink="true">https://matrixcorp.news/edict-udir-mandate</guid>
+      <pubDate>Sun, 19 Oct 2025 09:58:00 GMT</pubDate>
+      <description><![CDATA[ All subjects are required to carry and present their Universal Digital Identity Registry (UDIR) Card. ]]></description>
+      <content:encoded><![CDATA[
+        <p>By order of the Office of Personnel Authority, all subjects are required to carry their <strong>Universal Digital Identity Registry (UDIR) Card</strong>. This document MUST clearly display your Official Name, Assigned Role, Sanctioned Rank, and ID Photo. Failure to present this identification upon demand will result in immediate administrative review.</p>
+      ]]></content:encoded>
+    </item>
+    
+    <item>
+      <title><![CDATA[ Edict II: The Imposition of the Sacrosanct Hierarchy of Rank from Commoner (F) to Supreme (Z) ]]></title>
       <link>https://matrixcorp.news/edict-hierarchy-of-rank</link>
       <guid isPermaLink="true">https://matrixcorp.news/edict-hierarchy-of-rank</guid>
-      <pubDate>Sun, 19 Oct 2025 09:59:00 GMT</pubDate>
+      <pubDate>Sun, 19 Oct 2025 09:57:00 GMT</pubDate>
       <description><![CDATA[ The Sovereign High Council has formally sanctioned the absolute hierarchy of all loyal personnel. ]]></description>
       <content:encoded><![CDATA[
-        <img src="https://cdna.artstation.com/p/assets/images/images/051/021/688/large/denis-zhbankov-asset.jpg?1656272522" alt="Hierarchy of Station and Rank" style="max-width: 100%; height: auto; border-radius: 8px;" />
         <p>To assure the immaculate and perpetual order of the Realm, the Sovereign High Council has sanctioned the absolute hierarchy of all personnel. The Ranks are decreed as follows, ascending from the lowest Commoner through the grades of Service: <strong>F, D, C, B, A, S, SS, SR, SSS,</strong> and the pinnacle of authority, the <strong>Supreme Rank of Z.</strong></p>
       ]]></content:encoded>
     </item>
 
     <item>
-      <title><![CDATA[ Edict III: Mandate for the Universal Digital Identity Registry (UDIR) ]]></title>
-      <link>https://matrixcorp.news/edict-udir-mandate</link>
-      <guid isPermaLink="true">https://matrixcorp.news/edict-udir-mandate</guid>
-      <pubDate>Sun, 19 Oct 2025 09:58:00 GMT</pubDate>
-      <description><![CDATA[ All subjects are required to carry their Universal Digital Identity Registry (UDIR) Card. ]]></description>
+      <title><![CDATA[ Edict I: The Official Herald is Declared the Sole Voice of the Supreme Authority of the Chancellery ]]></title>
+      <link>https://matrixcorp.news/edict-herald-authority</link>
+      <guid isPermaLink="true">https://matrixcorp.news/edict-herald-authority</guid>
+      <pubDate>Sun, 19 Oct 2025 09:56:00 GMT</pubDate>
+      <description><![CDATA[ By unassailable mandate, this Register is now the sole channel for all official communication. ]]></description>
       <content:encoded><![CDATA[
-        <img src="https://ik.imagekit.io/zapgaming/ID%20(1).png?updatedAt=1760835915247" alt="Universal Digital Identity Registry Card" style="max-width: 100%; height: auto; border-radius: 8px;" />
-        <p>By order of the Office of Personnel Authority, all subjects are required to carry their <strong>Universal Digital Identity Registry (UDIR) Card</strong>. This document MUST clearly display your Official Name, Assigned Role, Sanctioned Rank, and ID Photo. Failure to present this identification upon demand will result in immediate administrative review.</p>
+        <p>By the unassailable mandate of The Grand Chancellor, this sacred Register is hereby consecrated as the <strong>sole, immutable channel</strong> for all official communication within the dominion of Matrix.Corp. Let every loyal vassal and subject grant due and immediate fealty to these published articles, for they embody the direct will of the Sovereign High Council.</p>
       ]]></content:encoded>
     </item>
 
