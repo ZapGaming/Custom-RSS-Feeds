@@ -4,17 +4,14 @@
     <title><![CDATA[ The Grand Chancellery's Imperial Register of Matrix.Corp ]]></title>
     <description><![CDATA[ Solemn Decrees and Absolute Proclamations Issued by The Grand Chancellor and the High Scepter of Matrix.Corp. Let them be universally heeded. ]]>
     </description>
-    <!-- Link updated per previous mandate -->
     <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
     <atom:link href="https://raw.githubusercontent.com/ZapGaming/Custom-RSS-Feeds/refs/heads/main/Matrix.Corp.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
-    <!-- LAST BUILD DATE NOW REFLECTS GMT+8 OFFSET -->
-    <lastBuildDate>Sun, 19 Oct 2025 09:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Oct 2025 10:00:00 +0800</lastBuildDate>
     <generator>The Imperial Scriptorium of the Grand Chancellor</generator>
 
-    <!-- CUSTOM LOGO / CHANNEL IMAGE UPDATED -->
+    <!-- CUSTOM LOGO / CHANNEL IMAGE (NEW) -->
     <image>
-        <!-- The main Matrix.Corp logo URL -->
         <url>https://ik.imagekit.io/zapgaming/image_2025-10-19_090704639.png?updatedAt=1760836028811</url>
         <title><![CDATA[ The Grand Chancellery's Imperial Register of Matrix.Corp ]]></title>
         <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
@@ -25,49 +22,42 @@
 
     <item>
       <title><![CDATA[ Edict I: The Official Herald is Declared the Voice of Supreme Authority ]]></title>
-      <!-- Link updated per previous mandate -->
       <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
       <guid isPermaLink="false">matrix-corp-herald-final-001</guid>
-      <!-- Time adjusted to +0800 offset -->
       <pubDate>Sun, 19 Oct 2025 10:00:00 +0800</pubDate>
       <description><![CDATA[ By the unassailable mandate of The Grand Chancellor, this sacred Register is hereby consecrated as the sole, immutable channel for all official communication within the dominion of Matrix.Corp. Let every loyal vassal and subject grant due and immediate fealty to these published articles, for they embody the direct, unwavering will of the Sovereign High Council. These decrees shall chart the destiny of our magnificent Corporate Empire, and disobedience shall not be suffered. ]]></description>
-      <!-- Image URL is a stable placeholder -->
-      <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" length="0" type="image/jpeg"/>
+      <!-- Placeholder image: Using image/jpeg type -->
+      <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Official+Herald+Authority" type="image/jpeg"/>
     </item>
 
     <item>
       <title><![CDATA[ Edict II: The Imposition of the Sacrosanct Hierarchy of Station and Rank ]]></title>
-      <!-- Link updated per previous mandate -->
       <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
       <guid isPermaLink="false">matrix-corp-herald-final-002</guid>
-      <!-- Time adjusted to +0800 offset -->
       <pubDate>Sun, 19 Oct 2025 07:30:00 +0800</pubDate>
       <description><![CDATA[ To assure the immaculate and perpetual order of the Realm, the Sovereign High Council has formally sanctioned the absolute and unyielding hierarchy of all loyal personnel. Subjects are commanded to know their designated Station and its corresponding sacred duties without fail. The Ranks are decreed as follows, ascending from the lowest Commoner (F) through the grades of Service (D, C, B, A, S, SS, SR, SSS) to the pinnacle of authority, the Supreme Rank of Z. Execute your appointed duties with utmost diligence and honor, and ascension within the hierarchy may be granted by the Grace of the Chancellor. ]]></description>
-      <!-- Image URL UPDATED for Ranks Announcement -->
-      <enclosure url="https://ik.imagekit.io/zapgaming/ID.png?updatedAt=1760835844546" length="0" type="image/png"/>
+      <!-- Ranks Announcement Image (NEW): Using image/png type -->
+      <enclosure url="https://ik.imagekit.io/zapgaming/ID.png?updatedAt=1760835844546" type="image/png"/>
     </item>
 
     <item>
       <title><![CDATA[ Edict III: Mandate for the Universal Digital Identity Registry (UDIR) ]]></title>
-      <!-- Link updated per previous mandate -->
       <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
       <guid isPermaLink="false">matrix-corp-herald-final-003</guid>
-      <!-- Time adjusted to +0800 offset -->
       <pubDate>Sat, 18 Oct 2025 05:00:00 +0800</pubDate>
       <description><![CDATA[ By order of the Office of Personnel Authority, all subjects are henceforth required to carry their **Universal Digital Identity Registry (UDIR) Card** at all times. This singular identification document MUST clearly display the individual's **Official Name**, **Assigned Role**, **Sanctioned Rank** (as per Edict II), and a high-resolution, current-state **ID Photo**. Any failure to present this authorized identification upon demand by a superior officer or security automaton will result in immediate, non-appealable administrative review and possible demotion. Compliance is non-negotiable for system security. ]]></description>
-      <!-- Image URL UPDATED for UDIR Mandate -->
-      <enclosure url="https://ik.imagekit.io/zapgaming/ID%20(1).png?updatedAt=1760835915247" length="0" type="image/png"/>
+      <!-- UDIR Mandate Image (NEW): Using image/png type -->
+      <enclosure url="https://ik.imagekit.io/zapgaming/ID%20(1).png?updatedAt=1760835915247" type="image/png"/>
     </item>
 
     <item>
       <title><![CDATA[ Edict IV: Provisional Study into Joyful Computational Learning Protocols ]]></title>
-      <!-- Link updated per previous mandate -->
       <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
       <guid isPermaLink="false">matrix-corp-herald-final-004</guid>
-      <!-- Time adjusted to +0800 offset -->
       <pubDate>Fri, 17 Oct 2025 02:00:00 +0800</pubDate>
       <description><![CDATA[ This decree initiates a high-priority, provisional study by the Department of Cognitive Optimization into the near-future viability of integrating advanced, computer-based instructional paradigms. The goal is to develop **Joyful Computational Learning Protocols** within all educational facilities. This potential shift aims to leverage immersive digital environments and gamified structures to enhance retention, engagement, and proficiency among personnel. The High Scepter is evaluating this possibility as a core strategic evolution for knowledge acquisition across the entire Corp. ]]></description>
-      <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Digital+Learning+Future" length="0" type="image/jpeg"/>
+      <!-- Placeholder image: Using image/jpeg type -->
+      <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Digital+Learning+Future" type="image/jpeg"/>
     </item>
 
   </channel>
