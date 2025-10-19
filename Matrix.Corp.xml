@@ -12,7 +12,17 @@
     <lastBuildDate>Sun, 19 Oct 2025 10:15:00 +0800</lastBuildDate>
     <generator>The Imperial Scriptorium of the Grand Chancellor</generator>
 
-
+    <item>
+      <title><![CDATA[ Edict II: The Imposition of the Sacrosanct Hierarchy of Station and Rank ]]></title>
+      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
+      <guid isPermaLink="false">matrix-corp-herald-final-002</guid>
+      <pubDate>Sun, 19 Oct 2025 14:00:00 GMT</pubDate>
+      <description><![CDATA[ The Sovereign High Council has formally sanctioned the absolute hierarchy of all loyal personnel. ]]></description>
+      <content:encoded><![CDATA[
+        <img src="" alt="UDIR" style="max-width: 100%; height: auto;" />
+        <p><strong>Matrix.Corp Digital Identity Cards</strong> will be made available for download starting October 21st, 2025. These verifiable credentials are tied directly to your user profile and provide cryptographic proof of your clearance within the corporate hierarchy.</p>
+      ]]></content:encoded>
+    </item>
 
   </channel>
 </rss>
