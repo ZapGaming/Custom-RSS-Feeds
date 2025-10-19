@@ -68,6 +68,19 @@
       <enclosure url="https://placehold.co/600x400/171717/fefefe?text=Digital+Learning+Future" type="image/jpeg"/>
       <media:content url="https://placehold.co/600x400/171717/fefefe?text=Digital+Learning+Future" type="image/jpeg"/>
     </item>
-
+    
+    <item>
+      <title><![CDATA[ Lets have a good term 2 ]]></title>
+      <link>https://example.com/item1</link>
+      <guid isPermaLink="true">https://example.com/item1</guid>
+      <pubDate>Sat, 19 Oct 2025 10:00:00 +0800</pubDate>
+      <description><![CDATA[ Lets all have a good term 2 ]]></description>
+      <content:encoded><![CDATA[
+        <img src="URL_TO_YOUR_IMAGE" alt="Description" />
+        <p><strong>Hopes:</strong> We hope that by the end of the term we are all having fun and are enjoying school</p>
+        <p>Lets hope the teachers let us have fun education on our devices</p>
+      ]]></content:encoded>
+    </item>
+    
   </channel>
 </rss>
