@@ -46,14 +46,10 @@
       <content:encoded><![CDATA[
         <img src="https://ik.imagekit.io/zapgaming/ID.png?updatedAt=1760835844546" alt="UDIR" style="max-width: 100%; height: auto;" />
         <p>To assure the immaculate and perpetual order of the Realm, the Sovereign High Council has formally sanctioned the absolute and unyielding hierarchy of all loyal personnel. Subjects are commanded to know their designated Station and its corresponding sacred duties without fail. The Ranks are decreed as follows, ascending from the lowest Commoner (F) through the grades of Service (D, C, B, A, S, SS, SR, SSS) to the pinnacle of authority, the Supreme Rank of Z. Execute your appointed duties with utmost diligence and honor, and ascension within the hierarchy may be granted by the Grace of the Chancellor.</p>
-        <enclosure url="https://ik.imagekit.io/zapgaming/ID.png?updatedAt=1760835844546" type="image/png"/>
-        <media:content url="https://ik.imagekit.io/zapgaming/ID.png?updatedAt=1760835844546" type="image/png"/>
-        <!-- FULL HTML CONTENT with explicit image tag -->
       ]]></content:encoded>
     </item>
+    
 
-  </channel>
-</rss>
 
 
 
@@ -134,3 +130,6 @@
         <p>This decree initiates a high-priority, provisional study by the Department of Cognitive Optimization into the near-future viability of integrating advanced, computer-based instructional paradigms. The goal is to develop <strong>Joyful Computational Learning Protocols</strong> within all educational facilities. This potential shift aims to leverage immersive digital environments and gamified structures to enhance retention, engagement, and proficiency among personnel. The High Scepter is evaluating this possibility as a core strategic evolution for knowledge acquisition across the entire Corp.</p>
       ]]></content:encoded>
     </item>
+
+  </channel>
+</rss>
