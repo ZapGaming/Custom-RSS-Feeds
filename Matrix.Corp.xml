@@ -71,12 +71,12 @@
     
     <item>
       <title><![CDATA[ Lets have a good term 2 ]]></title>
-      <link>https://example.com/item1</link>
-      <guid isPermaLink="true">https://example.com/item1</guid>
+      <link>https://discord.com/channels/1405823672736022649/1429270669543342101</link>
+      <guid isPermaLink="false">a-good-term-2</guid>
       <pubDate>Sat, 19 Oct 2025 10:00:00 +0800</pubDate>
       <description><![CDATA[ Lets all have a good term 2 ]]></description>
       <content:encoded><![CDATA[
-        <img src="URL_TO_YOUR_IMAGE" alt="Description" />
+        <img src="https://cdn.wallpapersafari.com/87/23/X3lUA5.jpg" alt="Description" />
         <p><strong>Hopes:</strong> We hope that by the end of the term we are all having fun and are enjoying school</p>
         <p>Lets hope the teachers let us have fun education on our devices</p>
       ]]></content:encoded>
